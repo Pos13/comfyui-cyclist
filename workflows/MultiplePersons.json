@@ -1,0 +1,1610 @@
+{
+  "last_node_id": 139,
+  "last_link_id": 215,
+  "nodes": [
+    {
+      "id": 95,
+      "type": "ImpactSEGSOrderedFilter",
+      "pos": [
+        3175.2153660156237,
+        490.1126270019523
+      ],
+      "size": {
+        "0": 210,
+        "1": 150
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 104
+        }
+      ],
+      "outputs": [
+        {
+          "name": "filtered_SEGS",
+          "type": "SEGS",
+          "links": [
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "remained_SEGS",
+          "type": "SEGS",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactSEGSOrderedFilter"
+      },
+      "widgets_values": [
+        "area(=w*h)",
+        true,
+        0,
+        1
+      ]
+    },
+    {
+      "id": 94,
+      "type": "SegsToCombinedMask",
+      "pos": [
+        3405.2153660156237,
+        490.1126270019523
+      ],
+      "size": {
+        "0": 140,
+        "1": 30
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            177
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "SEGS to MASK",
+      "properties": {
+        "Node name for S&R": "SegsToCombinedMask"
+      }
+    },
+    {
+      "id": 24,
+      "type": "SAMDetectorCombined",
+      "pos": [
+        2675.2153660156237,
+        490.1126270019523
+      ],
+      "size": {
+        "0": 250,
+        "1": 220
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "sam_model",
+          "type": "SAM_MODEL",
+          "link": 23
+        },
+        {
+          "name": "segs",
+          "type": "SEGS",
+          "link": 152
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": [
+            105
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMDetectorCombined"
+      },
+      "widgets_values": [
+        "vertical-2",
+        0,
+        0.93,
+        0,
+        0.7,
+        "False"
+      ]
+    },
+    {
+      "id": 93,
+      "type": "MaskToSEGS",
+      "pos": [
+        2945.2153660156237,
+        490.1126270019523
+      ],
+      "size": {
+        "0": 210,
+        "1": 154
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 105
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEGS",
+          "type": "SEGS",
+          "links": [
+            104
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "MaskToSEGS"
+      },
+      "widgets_values": [
+        false,
+        1,
+        false,
+        10,
+        false
+      ]
+    },
+    {
+      "id": 122,
+      "type": "VAEDecode",
+      "pos": [
+        1589.9999999999995,
+        1068.8447084960967
+      ],
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 171
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 198
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            204
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 129,
+      "type": "KSampler",
+      "pos": [
+        1965.2153660156257,
+        490.1126270019523
+      ],
+      "size": {
+        "0": 280,
+        "1": 262
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 179
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 202
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 190
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 200
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            182
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        982611540012965,
+        "randomize",
+        26,
+        7,
+        "dpmpp_3m_sde_gpu",
+        "karras",
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1725.2153660156257,
+        860.112627001953
+      ],
+      "size": {
+        "0": 210,
+        "1": 110
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            200
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        504,
+        896,
+        1
+      ]
+    },
+    {
+      "id": 112,
+      "type": "UltralyticsDetectorProvider",
+      "pos": [
+        1965.2153660156257,
+        800.112627001953
+      ],
+      "size": {
+        "0": 315,
+        "1": 78
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "BBOX_DETECTOR",
+          "type": "BBOX_DETECTOR",
+          "links": [
+            148
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "SEGM_DETECTOR",
+          "type": "SEGM_DETECTOR",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltralyticsDetectorProvider"
+      },
+      "widgets_values": [
+        "segm/person_yolov8m-seg.pt"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        340,
+        1010
+      ],
+      "size": {
+        "0": 420,
+        "1": 100
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            193,
+            195
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            194,
+            196,
+            197
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            198,
+            199
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "ct_m-clip1-840000.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 130,
+      "type": "Interrupt",
+      "pos": [
+        1755.2153660156257,
+        760.112627001953
+      ],
+      "size": [
+        160,
+        60
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_in",
+          "type": "*",
+          "link": 201,
+          "color_on": ""
+        },
+        {
+          "name": "stop",
+          "type": "BOOLEAN",
+          "link": 206,
+          "widget": {
+            "name": "stop"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            202
+          ],
+          "shape": 3,
+          "color_on": "#FFA931",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Interrupt"
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 121,
+      "type": "KSampler",
+      "pos": [
+        1279.9999999999995,
+        1068.8447084960967
+      ],
+      "size": {
+        "0": 280,
+        "1": 262
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 195
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 169
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 189
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            171
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        303741498099942,
+        "fixed",
+        26,
+        7,
+        "dpmpp_3m_sde_gpu",
+        "karras",
+        1
+      ]
+    },
+    {
+      "id": 50,
+      "type": "CLIPTextEncode",
+      "pos": [
+        810,
+        1088.8447084960967
+      ],
+      "size": {
+        "0": 210,
+        "1": 130
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 197
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            169
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Background Positive",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "sfw, 3d render, 8K wallpaper, in headquarters, underground lab, cold lights, high quality, digital art"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 114,
+      "type": "BboxDetectorSEGS",
+      "pos": [
+        2430,
+        590
+      ],
+      "size": {
+        "0": 210,
+        "1": 212.00003051757812
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "bbox_detector",
+          "type": "BBOX_DETECTOR",
+          "link": 148
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 150
+        },
+        {
+          "name": "detailer_hook",
+          "type": "DETAILER_HOOK",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SEGS",
+          "type": "SEGS",
+          "links": [
+            152
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BboxDetectorSEGS"
+      },
+      "widgets_values": [
+        0.6,
+        10,
+        3,
+        10,
+        "all"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "SAMLoader",
+      "pos": [
+        2360,
+        850
+      ],
+      "size": {
+        "0": 280,
+        "1": 82
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "SAM_MODEL",
+          "type": "SAM_MODEL",
+          "links": [
+            23
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SAMLoader"
+      },
+      "widgets_values": [
+        "sam_vit_h_4b8939.pth",
+        "AUTO"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "VAEDecode",
+      "pos": [
+        2270,
+        490
+      ],
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 182
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 199
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            108,
+            150,
+            176
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 5,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1039.9999999999995,
+        1138.8447084960967
+      ],
+      "size": {
+        "0": 210,
+        "1": 76.00001525878906
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 196
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            189,
+            190
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Negative",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "low quality, worst quality, drawing, sketch, simple, blurry, nsfw, boobs, pussy, naked"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 110,
+      "type": "ImpactWildcardEncode",
+      "pos": [
+        805.2153660156247,
+        490.1126270019523
+      ],
+      "size": {
+        "0": 890,
+        "1": 480
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 193
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            179
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "links": [
+            201
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "populated_text",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactWildcardEncode"
+      },
+      "widgets_values": [
+        "{(ashe \\(overwatch\\)), white straight hair, black cowboy hat, (red lips:0.9), (black leather jacket, white shirt:0.9), leather boots <lora:ashe:0.8>|\n(d.va \\(overwatch\\)), headphones, turtleneck, shoulder pads, thighhighs, (ribbed bodysuit, midriff:0.9), bunny print, (thigh boots:1.1) <lora:diva_separate:0.7>|\n(mei \\(overwatch\\)), thick thighs, brown hair, glasses, hairpin, (winter clothes:0.9), blue legwear, (black winter boots:0.9) <lora:mei:0.8>|\n(mercy \\(overwatch\\)), blonde spiked hair, glowing wings, halo, tights, black gloves, (white armor:0.9), knee boots <lora:mercy:0.7>|\n(tracer \\(overwatch\\)), anime spiked hair, shiny brown hair, yellow glasses, (yellow skintight jumpsuit, leather vest:0.9), white shoes <lora:tracer:0.75>|\n(widowmaker \\(overwatch\\)), (blue skin:1.3), dark violet braid, (helmet with red visors:0.9), (pink latex bodysuit, skintight stiped legwear:0.9), elbow gloves, cleavage, edgy eyebrows, (high heels:1.1) <lora:widowmaker:0.95>} {standing|posing|dancing}",
+        "\n(tracer \\(overwatch\\)), anime spiked hair, shiny brown hair, yellow glasses, (yellow skintight jumpsuit, leather vest:0.9), white shoes <lora:tracer:0.75> posing",
+        true,
+        "Select the LoRA to add to the text",
+        "Select the Wildcard to add to the text",
+        890732708269822,
+        "randomize"
+      ]
+    },
+    {
+      "id": 132,
+      "type": "CyclistCompare",
+      "pos": [
+        1480,
+        1380
+      ],
+      "size": [
+        210,
+        80
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "thing1",
+          "type": "*",
+          "link": 207
+        },
+        {
+          "name": "thing2",
+          "type": "*",
+          "link": 208
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            206
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Enough Persons?",
+      "properties": {
+        "Node name for S&R": "CyclistCompare"
+      },
+      "widgets_values": [
+        "less or equals"
+      ]
+    },
+    {
+      "id": 135,
+      "type": "CyclistMathInt",
+      "pos": [
+        1940,
+        1460
+      ],
+      "size": [
+        210,
+        80
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "int_1",
+          "type": "INT",
+          "link": 209,
+          "widget": {
+            "name": "int_1"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            210
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CyclistMathInt"
+      },
+      "widgets_values": [
+        "multiplication",
+        1,
+        504
+      ]
+    },
+    {
+      "id": 136,
+      "type": "CyclistMathInt",
+      "pos": [
+        1480,
+        1520
+      ],
+      "size": [
+        210,
+        80
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "int_1",
+          "type": "INT",
+          "link": 211,
+          "widget": {
+            "name": "int_1"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            212
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CyclistMathInt"
+      },
+      "widgets_values": [
+        "addition",
+        1,
+        1
+      ]
+    },
+    {
+      "id": 127,
+      "type": "ImageCompositeMasked",
+      "pos": [
+        2150,
+        1069.92236328125
+      ],
+      "size": {
+        "0": 210,
+        "1": 142
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "destination",
+          "type": "IMAGE",
+          "link": 205
+        },
+        {
+          "name": "source",
+          "type": "IMAGE",
+          "link": 176
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "link": 177
+        },
+        {
+          "name": "x",
+          "type": "INT",
+          "link": 210,
+          "widget": {
+            "name": "x"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            213
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageCompositeMasked"
+      },
+      "widgets_values": [
+        0,
+        0,
+        false
+      ]
+    },
+    {
+      "id": 131,
+      "type": "CyclistMathInt",
+      "pos": [
+        570,
+        1380
+      ],
+      "size": [
+        210,
+        110
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            207,
+            214
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Number of Persons",
+      "properties": {
+        "Node name for S&R": "CyclistMathInt"
+      },
+      "widgets_values": [
+        "addition",
+        5,
+        0
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 139,
+      "type": "CyclistMathInt",
+      "pos": [
+        810,
+        1270
+      ],
+      "size": [
+        210,
+        80
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "int_1",
+          "type": "INT",
+          "link": 214,
+          "widget": {
+            "name": "int_1"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            215
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CyclistMathInt"
+      },
+      "widgets_values": [
+        "multiplication",
+        1,
+        504
+      ]
+    },
+    {
+      "id": 58,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1040,
+        1270
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 215,
+          "widget": {
+            "name": "width"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            170
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        640,
+        896,
+        1
+      ]
+    },
+    {
+      "id": 133,
+      "type": "ReloadImage",
+      "pos": [
+        1770,
+        1070
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "fallback",
+          "type": "IMAGE",
+          "link": 204
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            205
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReloadImage"
+      },
+      "widgets_values": [
+        "MultiplePersons_1"
+      ]
+    },
+    {
+      "id": 138,
+      "type": "OverrideImage",
+      "pos": [
+        2390,
+        1070
+      ],
+      "size": [
+        1160,
+        530
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 213
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OverrideImage"
+      },
+      "widgets_values": [
+        "MultiplePersons_1"
+      ]
+    },
+    {
+      "id": 134,
+      "type": "RecallInt",
+      "pos": [
+        1250,
+        1460
+      ],
+      "size": [
+        210,
+        80
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            208,
+            209,
+            211
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RecallInt"
+      },
+      "widgets_values": [
+        "MultiplePersons_1",
+        0
+      ]
+    },
+    {
+      "id": 137,
+      "type": "MemorizeInt",
+      "pos": [
+        1720,
+        1520
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "to_memory",
+          "type": "INT",
+          "link": 212,
+          "widget": {
+            "name": "to_memory"
+          }
+        }
+      ],
+      "title": "Memorize Amount",
+      "properties": {
+        "Node name for S&R": "MemorizeInt"
+      },
+      "widgets_values": [
+        "MultiplePersons_1",
+        0
+      ]
+    }
+  ],
+  "links": [
+    [
+      23,
+      25,
+      0,
+      24,
+      0,
+      "SAM_MODEL"
+    ],
+    [
+      103,
+      95,
+      0,
+      94,
+      0,
+      "SEGS"
+    ],
+    [
+      104,
+      93,
+      0,
+      95,
+      0,
+      "SEGS"
+    ],
+    [
+      105,
+      24,
+      0,
+      93,
+      0,
+      "MASK"
+    ],
+    [
+      108,
+      13,
+      0,
+      24,
+      2,
+      "IMAGE"
+    ],
+    [
+      148,
+      112,
+      0,
+      114,
+      0,
+      "BBOX_DETECTOR"
+    ],
+    [
+      150,
+      13,
+      0,
+      114,
+      1,
+      "IMAGE"
+    ],
+    [
+      152,
+      114,
+      0,
+      24,
+      1,
+      "SEGS"
+    ],
+    [
+      169,
+      50,
+      0,
+      121,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      170,
+      58,
+      0,
+      121,
+      3,
+      "LATENT"
+    ],
+    [
+      171,
+      121,
+      0,
+      122,
+      0,
+      "LATENT"
+    ],
+    [
+      176,
+      13,
+      0,
+      127,
+      1,
+      "IMAGE"
+    ],
+    [
+      177,
+      94,
+      0,
+      127,
+      2,
+      "MASK"
+    ],
+    [
+      179,
+      110,
+      0,
+      129,
+      0,
+      "MODEL"
+    ],
+    [
+      182,
+      129,
+      0,
+      13,
+      0,
+      "LATENT"
+    ],
+    [
+      189,
+      5,
+      0,
+      121,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      190,
+      5,
+      0,
+      129,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      193,
+      1,
+      0,
+      110,
+      0,
+      "MODEL"
+    ],
+    [
+      194,
+      1,
+      1,
+      110,
+      1,
+      "CLIP"
+    ],
+    [
+      195,
+      1,
+      0,
+      121,
+      0,
+      "MODEL"
+    ],
+    [
+      196,
+      1,
+      1,
+      5,
+      0,
+      "CLIP"
+    ],
+    [
+      197,
+      1,
+      1,
+      50,
+      0,
+      "CLIP"
+    ],
+    [
+      198,
+      1,
+      2,
+      122,
+      1,
+      "VAE"
+    ],
+    [
+      199,
+      1,
+      2,
+      13,
+      1,
+      "VAE"
+    ],
+    [
+      200,
+      9,
+      0,
+      129,
+      3,
+      "LATENT"
+    ],
+    [
+      201,
+      110,
+      2,
+      130,
+      0,
+      "*"
+    ],
+    [
+      202,
+      130,
+      0,
+      129,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      204,
+      122,
+      0,
+      133,
+      0,
+      "IMAGE"
+    ],
+    [
+      205,
+      133,
+      0,
+      127,
+      0,
+      "IMAGE"
+    ],
+    [
+      206,
+      132,
+      0,
+      130,
+      1,
+      "BOOLEAN"
+    ],
+    [
+      207,
+      131,
+      0,
+      132,
+      0,
+      "*"
+    ],
+    [
+      208,
+      134,
+      0,
+      132,
+      1,
+      "*"
+    ],
+    [
+      209,
+      134,
+      0,
+      135,
+      0,
+      "INT"
+    ],
+    [
+      210,
+      135,
+      0,
+      127,
+      3,
+      "INT"
+    ],
+    [
+      211,
+      134,
+      0,
+      136,
+      0,
+      "INT"
+    ],
+    [
+      212,
+      136,
+      0,
+      137,
+      0,
+      "INT"
+    ],
+    [
+      213,
+      127,
+      0,
+      138,
+      0,
+      "IMAGE"
+    ],
+    [
+      214,
+      131,
+      0,
+      139,
+      0,
+      "INT"
+    ],
+    [
+      215,
+      139,
+      0,
+      58,
+      0,
+      "INT"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Generate next person",
+      "bounding": [
+        795,
+        416,
+        2760,
+        564
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    },
+    {
+      "title": "Put at background",
+      "bounding": [
+        800,
+        995,
+        2760,
+        617
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

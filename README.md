@@ -15,7 +15,7 @@
 ![Screenshot of ComfyUI options with "New Cycle" button.](screenshots/New_Cycle_button.png)
 
 > [!WARNING]
-> Check [Known Issues](#known-issies) at the bottom of this page to learn about non-obvious behaviour.
+> Check [Known Issues](#known-issues) at the bottom of this page to learn about non-obvious behaviour.
 
 ## Installation
 

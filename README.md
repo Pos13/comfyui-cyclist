@@ -28,7 +28,7 @@ __Option 2__:
 
 ## Nodes and example workflows
 
-<ins>**Recall/Memorize Int/Float/String**</ins>: These simple nodes load and save something in memory. Variables are exclusive to provided loop ID. You can store exactly one Int, one Float, one String and one Conditioning for every loop ID. Change ID to load/save a new variable of this type. Example:
+<ins>**Recall/Memorize Int/Float/String**</ins>: These simple nodes load and save something in memory. They will not save if you restart ComfyUI. Variables are exclusive to provided loop ID. You can store exactly one Int, one Float, one String and one Conditioning for every loop ID. Change ID to load/save a new variable of this type. Example:
 
 <details>
   <summary>${\color{blue}Workflow\ to\ generate\ an\ image\ until\ it\ gets\ a\ high\ score}$</summary>

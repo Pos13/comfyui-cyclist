@@ -35,7 +35,7 @@ __Option 2__:
 
 Every time an image is generated, it gets a score made by [Image Reward Score](https://github.com/ZaneA/ComfyUI-ImageReward) node. Score is saved by **Memorize Float** node. Next gen, it's loaded and compared to user-provided target score. If greater, process is stopped.
 
-![Workflow to generate Image until it gets a high score](workflows/GenUntilGoodNoWAS.png)
+![Workflow to generate Image until it gets a high score](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/GenUntilGoodNoWAS.png)
     
 </details><br/>
 
@@ -60,7 +60,7 @@ This is slightly modified version of the workflow above. Not a score is saved, b
 - **Compare Anything** node compares float scores.
 - **Float Math** node is used to provide float constant, as Primitive node can't be connected to unspecified input. "Adding zero" just outputs upper value.
 
-![Workflow to generate Image until it gets a high score, but always save best attempt](workflows/GenUntilGood.png)
+![Workflow to generate Image until it gets a high score, but always save best attempt](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/GenUntilGood.png)
     
 </details><br/>
 
@@ -73,7 +73,7 @@ This is slightly modified version of the workflow above. Not a score is saved, b
 
 Don't use _Auto Queue_ here! You'd probably want to click "_Queue Prompt_" manually, and press "_New Cycle_" whenever result is already good enough.
 
-![Workflow to generate ugly animal crossbreeds](workflows/ChimeraMaker.png)
+![Workflow to generate ugly animal crossbreeds](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/ChimeraMaker.png)
     
 </details><br/>
 
@@ -96,7 +96,7 @@ Triggered **Interrupt** will show this message:
 
 Before generating a new image, "BLIP Interrogate" node from [WAS Node Suite](https://github.com/WASasquatch/was-node-suite-comfyui) tries to analyze previous result. If answers are right, generation stops.
 
-![Workflow to generate image until right things are recognised](workflows/GenUntilRight.png)
+![Workflow to generate image until right things are recognised](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/GenUntilRight.png)
     
 </details><br/>
 
@@ -109,7 +109,7 @@ This workflow is for testing model's LoRA compatibility. Apply more and more ran
 
 Don't use _Auto Queue_ here! You'd probably want to click "_Queue Prompt_" manually, and press "_New Cycle_" whenever result is already ~~good~~ bad enough.
 
-![Workflow to apply LoRAs to the model until it breaks](workflows/LoRABurnTest.png)
+![Workflow to apply LoRAs to the model until it breaks](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/LoRABurnTest.png)
     
 </details><br/>
 
@@ -122,7 +122,7 @@ This workflow uses latent upscale by x1.375 times over and over, until image bec
 
 Notice disabled nodes! Enable them only after the whole cycle is done to save time and not calculate intermediate results. Enabling them will not disrupt normal cycle flow in any way. No early interrupts, no extra iterations.
 
-![Workflow to gradually upscale image until megapixel count is met](workflows/UpscaleToMegapixels.png)
+![Workflow to gradually upscale image until megapixel count is met](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/UpscaleToMegapixels.png)
     
 </details><br/>
 
@@ -141,7 +141,7 @@ Mutiple **Generation Timers** can be used, but you better assign them to differe
 
 This is almost a default ComfyUI workflow! Just set amount of time you want your PC to work generating images, check "_Extra options_" and "_Auto Queue_" checkboxes, and press "_Queue Prompt_" button.
 
-![Workflow that works for certain amount of time](workflows/TimeLimit.png)
+![Workflow that works for certain amount of time](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/TimeLimit.png)
     
 </details><br/>
 
@@ -154,7 +154,7 @@ Set a width and height, and image will upscale to it. But not in one go: it calc
 
 It's a little wild :sweat_smile:.
 
-![Workflow to evenly upscale to exact resolution](workflows/UpscaleToResolution.png)
+![Workflow to evenly upscale to exact resolution](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/UpscaleToResolution.png)
     
 </details><br/>
 
@@ -163,9 +163,9 @@ It's a little wild :sweat_smile:.
 
 SDXL Turbo is used to make the amount of very noisy cats _fast_. They pile on noisy background one-by-one, top to bottom. After the cycle is done, unmute the top group of node to generate final result.
 
-[Use Everywhere](https://github.com/chrisgoringe/cg-use-everywhere) nodes hide links. Version without is [exists](workflows/CatStackNoUE.json), but it's messy.
+[Use Everywhere](https://github.com/chrisgoringe/cg-use-everywhere) nodes hide links. Version without is [exists](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/CatStackNoUE.json), but it's messy.
 
-![Workflow to stack cats](workflows/CatStack.png)
+![Workflow to stack cats](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/CatStack.png)
     
 </details><br/>
 

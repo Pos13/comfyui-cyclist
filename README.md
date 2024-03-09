@@ -98,6 +98,8 @@ Triggered **Interrupt** will show this message:
 
 Before generating a new image, "BLIP Interrogate" node from [WAS Node Suite](https://github.com/WASasquatch/was-node-suite-comfyui) tries to analyze previous result. If answers are right, generation stops.
 
+Workflow page at civitai: [https://civitai.com/models/342128](https://civitai.com/models/342128)
+
 ![Workflow to generate image until right things are recognised](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/GenUntilRight.png)
     
 </details><br/>
@@ -142,6 +144,8 @@ Mutiple **Generation Timers** can be used, but you better assign them to differe
   <summary>${\color{blue}Workflow\ that\ works\ for\ certain\ amount\ of\ time}$</summary>
 
 This is almost a default ComfyUI workflow! Just set amount of time you want your PC to work generating images, check "_Extra options_" and "_Auto Queue_" checkboxes, and press "_Queue Prompt_" button.
+
+Workflow page at civitai: [https://civitai.com/models/342065](https://civitai.com/models/342065)
 
 ![Workflow that works for certain amount of time](https://github.com/Pos13/comfyui-cyclist/blob/main/workflows/TimeLimit.png)
     

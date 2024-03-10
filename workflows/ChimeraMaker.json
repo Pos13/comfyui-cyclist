@@ -1,6 +1,6 @@
 {
-  "last_node_id": 82,
-  "last_link_id": 141,
+  "last_node_id": 83,
+  "last_link_id": 146,
   "nodes": [
     {
       "id": 26,
@@ -39,53 +39,6 @@
       }
     },
     {
-      "id": 79,
-      "type": "CLIPTextEncode",
-      "pos": [
-        520,
-        -80
-      ],
-      "size": {
-        "0": 210,
-        "1": 54
-      },
-      "flags": {},
-      "order": 6,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 135
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 134,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            133
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        ""
-      ]
-    },
-    {
       "id": 25,
       "type": "Reroute",
       "pos": [
@@ -97,7 +50,7 @@
         26
       ],
       "flags": {},
-      "order": 7,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -122,45 +75,6 @@
       }
     },
     {
-      "id": 77,
-      "type": "ImpactWildcardProcessor",
-      "pos": [
-        190,
-        -250
-      ],
-      "size": {
-        "0": 300,
-        "1": 222
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            134
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImpactWildcardProcessor"
-      },
-      "widgets_values": [
-        "(__jumbo/creatures/animals__)",
-        "(marmoset)",
-        true,
-        914844173107291,
-        "randomize",
-        "Select the Wildcard to add to the text"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 5,
       "type": "EmptyLatentImage",
       "pos": [
@@ -172,7 +86,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -246,7 +160,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        54384236231586,
+        349453498963304,
         "randomize",
         18,
         4.5,
@@ -267,7 +181,7 @@
         "1": 100
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -348,89 +262,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": [
-        520,
-        150
-      ],
-      "size": {
-        "0": 210,
-        "1": 90
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 3
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            137
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "Positive",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "photo of cute animal"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 75,
-      "type": "ConditioningCombine",
-      "pos": [
-        1000,
-        -80
-      ],
-      "size": {
-        "0": 230,
-        "1": 50
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning_1",
-          "type": "CONDITIONING",
-          "link": 133
-        },
-        {
-          "name": "conditioning_2",
-          "type": "CONDITIONING",
-          "link": 139
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            140
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Cond Combine",
-      "properties": {
-        "Node name for S&R": "ConditioningCombine"
-      }
-    },
-    {
       "id": 8,
       "type": "VAEDecode",
       "pos": [
@@ -471,16 +302,184 @@
       }
     },
     {
+      "id": 79,
+      "type": "CLIPTextEncode",
+      "pos": [
+        520,
+        -80
+      ],
+      "size": {
+        "0": 210,
+        "1": 54
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 135
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 134,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            146
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 83,
+      "type": "ConditioningConcat",
+      "pos": [
+        1000,
+        -80
+      ],
+      "size": [
+        250,
+        50
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning_to",
+          "type": "CONDITIONING",
+          "link": 146
+        },
+        {
+          "name": "conditioning_from",
+          "type": "CONDITIONING",
+          "link": 145
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            144
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningConcat"
+      }
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        520,
+        150
+      ],
+      "size": {
+        "0": 210,
+        "1": 90
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            137
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "photo of a cute animal"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 77,
+      "type": "ImpactWildcardProcessor",
+      "pos": [
+        190,
+        -250
+      ],
+      "size": {
+        "0": 300,
+        "1": 222
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            134
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactWildcardProcessor"
+      },
+      "widgets_values": [
+        "__jumbo/creatures/animals__",
+        "chameleon",
+        true,
+        1063733259038353,
+        "randomize",
+        "Select the Wildcard to add to the text"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
       "id": 80,
       "type": "RecallConditioning",
       "pos": [
         760,
         150
       ],
-      "size": [
-        210,
-        60
-      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
       "flags": {},
       "order": 8,
       "mode": 0,
@@ -497,7 +496,7 @@
           "type": "CONDITIONING",
           "links": [
             138,
-            139
+            145
           ],
           "shape": 3,
           "slot_index": 0
@@ -514,13 +513,13 @@
       "id": 81,
       "type": "MemorizeConditioning",
       "pos": [
-        1260,
+        1280,
         -80
       ],
-      "size": [
-        210,
-        60
-      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
       "flags": {},
       "order": 12,
       "mode": 0,
@@ -528,7 +527,7 @@
         {
           "name": "to_memory",
           "type": "CONDITIONING",
-          "link": 140
+          "link": 144
         }
       ],
       "properties": {
@@ -545,10 +544,10 @@
         1480,
         130
       ],
-      "size": [
-        320,
-        270
-      ],
+      "size": {
+        "0": 320,
+        "1": 270
+      },
       "flags": {},
       "order": 13,
       "mode": 0,
@@ -641,14 +640,6 @@
       "LATENT"
     ],
     [
-      133,
-      79,
-      0,
-      75,
-      0,
-      "CONDITIONING"
-    ],
-    [
       134,
       77,
       0,
@@ -681,28 +672,36 @@
       "CONDITIONING"
     ],
     [
-      139,
-      80,
-      0,
-      75,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      140,
-      75,
-      0,
-      81,
-      0,
-      "CONDITIONING"
-    ],
-    [
       141,
       8,
       0,
       82,
       0,
       "IMAGE"
+    ],
+    [
+      144,
+      83,
+      0,
+      81,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      145,
+      80,
+      0,
+      83,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      146,
+      79,
+      0,
+      83,
+      0,
+      "CONDITIONING"
     ]
   ],
   "groups": [],

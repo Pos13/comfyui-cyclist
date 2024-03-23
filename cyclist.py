@@ -144,6 +144,10 @@ class CyclistWrite:
         cyclist_memory[loop_id][self.VAR_TYPE]["value"] = to_memory
         counter = self.update(loop_id)
         return {"ui": {"loop_id": (loop_id, ), "counter": (counter, )}} # and "results": (to_memory, ) ?
+    
+    @classmethod
+    def IS_CHANGED(self, loop_id, to_memory):
+        return float("NaN")
       
 #---------- PRIMITIVES ----------
 

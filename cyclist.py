@@ -493,17 +493,26 @@ class ReloadModel(CyclistRead):
     #NODE_NAME = "Reload Model"
 
     @classmethod
-    def GET_DIR(self):
+    def GET_DIR(self, filename):
         try:
-            result = folder_names_and_paths["checkpoints"][0][0]
-            return result
+            subfolder = os.path.dirname(os.path.normpath(filename))
+            filename = os.path.basename(os.path.normpath(filename))
+            filename = f"{filename}.safetensors"
+
+            dirs = folder_names_and_paths["checkpoints"][0]
+            for dir in dirs:
+                folder = os.path.join(dir, subfolder)
+                full_filepath = os.path.join(folder, filename)
+                if os.path.isfile(full_filepath):
+                    return dir
+            return dirs[0]
         except:
             result = folder_paths.get_output_directory()
             return result
 
     def read(self, filename, fallback_m=None, fallback_c=None, fallback_v=None):
         subfolder = os.path.dirname(os.path.normpath(filename))
-        folder = os.path.join(ReloadModel.GET_DIR(), subfolder)
+        folder = os.path.join(ReloadModel.GET_DIR(filename), subfolder)
         filename = os.path.basename(os.path.normpath(filename))
         filename = f"{filename}.safetensors"
         full_filepath = os.path.join(folder, filename)
@@ -528,7 +537,7 @@ class ReloadModel(CyclistRead):
     @classmethod
     def IS_CHANGED(self, filename, fallback=None):
         subfolder = os.path.dirname(os.path.normpath(filename))
-        folder = os.path.join(ReloadModel.GET_DIR(), subfolder)
+        folder = os.path.join(ReloadModel.GET_DIR(filename), subfolder)
         filename = os.path.basename(os.path.normpath(filename))
         filename = f"{filename}.safetensors"
         full_filepath = os.path.join(folder, filename)

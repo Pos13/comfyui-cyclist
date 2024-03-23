@@ -396,7 +396,7 @@ class ReloadImage(CyclistRead):
             i = ImageOps.exif_transpose(image)
             if i.mode == 'I':
                 i = i.point(lambda i: i * (1 / 255))
-            image = i.convert("RGB")
+            image = i.convert("RGBA")
             image = np.array(image).astype(np.float32) / 255.0
             image = torch.from_numpy(image)[None,]
         except:

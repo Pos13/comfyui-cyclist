@@ -24,6 +24,90 @@ DEFAULT_LOOP_ID = "ForLoop_1"
 
 cyclist_memory = {}
 
+def cyclist_file_state(loop_id, vartype):
+    global cyclist_memory
+    extension = {"LATENT": ".latent", "IMAGE": ".png", "MODEL": ".safetensors"}
+    folder = {"LATENT": ReloadLatent.GET_DIR(),
+              "IMAGE": ReloadImage.GET_DIR(),
+              "MODEL": ReloadModel.GET_DIR(loop_id)}
+    
+    subfolder = os.path.dirname(os.path.normpath(loop_id))
+    local_folder = os.path.join(folder[vartype], subfolder)
+    local_filename = f"{os.path.basename(os.path.normpath(loop_id))}{extension[vartype]}"
+    full_filepath = os.path.join(local_folder, local_filename)
+
+    file_exists = os.path.isfile(full_filepath)
+    counter_exists = loop_id in cyclist_memory and vartype in cyclist_memory[loop_id] and "counter" in cyclist_memory[loop_id][vartype]
+    if file_exists and counter_exists:
+        return f"(#{cyclist_memory[loop_id][vartype]['counter']}){vartype}: {local_filename}\n"
+    if file_exists and not counter_exists:
+        return f"{vartype}: {local_filename} <-- File exists before 1st loop!\n"
+    if not file_exists and counter_exists:
+        return f"(#{cyclist_memory[loop_id][vartype]['counter']}){vartype}: -- File doesn't exist!\n"
+    return ""
+
+def cyclist_memory_report():
+    global cyclist_memory
+    memory_content = ""
+    try:
+        for id in dict(reversed(list(cyclist_memory.items()))):
+            memory_content += f"{id}:\n"
+            for vartype in ("INT", "FLOAT", "STRING"):
+                if vartype in cyclist_memory[id] and "value" in cyclist_memory[id][vartype]:
+                    if "counter" in cyclist_memory[id][vartype]:
+                        memory_content += f"(#{cyclist_memory[id][vartype]['counter']})"
+                    memory_content += f"{vartype}: {cyclist_memory[id][vartype]['value']}\n"
+            if "CONDITIONING" in cyclist_memory[id] and "value" in cyclist_memory[id]["CONDITIONING"]:
+                if "counter" in cyclist_memory[id]["CONDITIONING"]:
+                        memory_content += f"(#{cyclist_memory[id]['CONDITIONING']['counter']})"
+                memory_content += "CONDITIONING: -- exists --\n"
+            
+            memory_content += cyclist_file_state(id, "LATENT")
+            memory_content += cyclist_file_state(id, "IMAGE")
+            memory_content += cyclist_file_state(id, "MODEL")
+            
+            #if "LoopTimer" in cyclist_memory[id]:
+            #    memory_content += "Start Timestamp: " + cyclist_memory[id]["LoopTimer"].start_time
+            
+            memory_content += "\n"
+        memory_content = memory_content[0:len(memory_content) - 2]
+    except:
+        memory_content = "-- Memory report failure --"
+        logging.warn("Memory report failed to assemble. Strange, but harmless.")
+    if (memory_content == ""):
+        memory_content = "-- Memory empty --"
+    return memory_content
+    
+class LoopManager:
+    """A node to show memory content and to provide a loop id"""
+
+    @classmethod
+    def INPUT_TYPES(s):
+        return {"required": { "loop_id": ("STRING", {"default": DEFAULT_LOOP_ID}),
+                              "increment": (["never", "by_interrupt_node", "on_any_interrupt"], {"default": "by_interrupt_node"})}}
+    
+    RETURN_TYPES = ("STRING", )
+    FUNCTION = "run"
+    OUTPUT_NODE = True
+    CATEGORY = "cyclist"
+
+    #NODE_NAME = "Loop Manager"
+
+    def run(self, loop_id, increment):
+        memory_content = cyclist_memory_report()
+
+        global cyclist_memory
+        if not loop_id in cyclist_memory:
+            filecheck = ""
+            filecheck += cyclist_file_state(loop_id, "LATENT")
+            filecheck += cyclist_file_state(loop_id, "IMAGE")
+            filecheck += cyclist_file_state(loop_id, "MODEL")
+            if filecheck != "":
+                memory_content += f"\n\n{loop_id}:\n{filecheck}"
+                memory_content = memory_content[0:len(memory_content) - 1]
+
+        return {"ui": {"memory_content": (memory_content,), "increment": (increment, )}, "result": (loop_id,)}
+    
 # 'required' input can't be '*', unless it can. Thanks, @pythongossss
 class AnyType(str):
     def __ne__(self, __value: object) -> bool:
@@ -57,10 +141,10 @@ class CyclistInterrupt:
         return False # Always the same value, as it's never changed unless inputs were
     
     def interrupt(self):
-        nodes.interrupt_processing(True)
         message = "Processing is intentionally interrupted by 'Interrupt' node.\nGuess the work is done! 😎"
         print(message)
         PromptServer.instance.send_sync("cyclist.message.popup", {"stop": True, "message" : message})
+        nodes.interrupt_processing(True)
         #logging.info(message)
         #raise Exception(message)
 
@@ -143,7 +227,7 @@ class CyclistWrite:
         
         cyclist_memory[loop_id][self.VAR_TYPE]["value"] = to_memory
         counter = self.update(loop_id)
-        return {"ui": {"loop_id": (loop_id, ), "counter": (counter, )}} # and "results": (to_memory, ) ?
+        return {"ui": {"loop_id": (loop_id, ), "counter": (counter, ), "memory_content": (cyclist_memory_report(),)}} # and "results": (to_memory, ) ?
     
     @classmethod
     def IS_CHANGED(self, loop_id, to_memory):
@@ -361,7 +445,7 @@ class OverrideLatent(CyclistWrite):
         comfy.utils.save_torch_file(output, full_filepath, metadata=metadata)
 
         counter = self.update(loop_id)
-        return { "ui": { "latents": results, "loop_id": (loop_id, ), "counter": (counter, )} }
+        return { "ui": { "latents": results, "loop_id": (loop_id, ), "counter": (counter, ), "memory_content": (cyclist_memory_report(),)} }
 
 #---------- IMAGE ----------
 
@@ -475,7 +559,7 @@ class OverrideImage(CyclistWrite):
         img.save(full_filepath, pnginfo=metadata, compress_level=4)
         
         counter = self.update(loop_id)
-        return { "ui": { "images": results, "loop_id": (loop_id, ), "counter": (counter, )} }
+        return { "ui": { "images": results, "loop_id": (loop_id, ), "counter": (counter, ), "memory_content": (cyclist_memory_report(),)} }
 
 #---------- Model ----------
 
@@ -615,7 +699,7 @@ class OverrideModel(CyclistWrite):
         comfy.sd.save_checkpoint(full_filepath, model, clip, vae, clip_vision=None, metadata=metadata)
 
         counter = self.update(loop_id)
-        return {"ui": {"loop_id": (loop_id, ), "counter": (counter, )}}
+        return {"ui": {"loop_id": (loop_id, ), "counter": (counter, ), "memory_content": (cyclist_memory_report(),)}}
 
 # Not implemented yet, because CLIP object can actually consist of several CLIPs, and it (probably) requires to save/load using several files
 """

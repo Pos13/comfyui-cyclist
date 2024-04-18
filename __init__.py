@@ -11,6 +11,7 @@ from .util_nodes import *
 
 WEB_DIRECTORY = "./js"
 NODE_CLASS_MAPPINGS = {
+    "LoopManager": LoopManager,
     "Interrupt": CyclistInterrupt, 
 
     "ReloadImage": ReloadImage, 
@@ -37,6 +38,7 @@ NODE_CLASS_MAPPINGS = {
     "CyclistTimerStop": CyclistTimerStop
 }
 NODE_DISPLAY_NAME_MAPPINGS = {
+    "LoopManager": "Loop Manager",
     "Interrupt": "Interrupt", 
     "RecallString": "Recall String", 
     "MemorizeString": "Memorize String", 

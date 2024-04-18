@@ -1,6 +1,7 @@
 import { app } from "../../../scripts/app.js";
 import { api } from "../../../scripts/api.js";
 import { $el } from "../../../scripts/ui.js";
+import { ComfyWidgets } from "../../../scripts/widgets.js";
 
 var cyclist_states = {}
 
@@ -23,9 +24,51 @@ function drawBadge(ctx, text, color="green") {
 app.registerExtension({
     name: "comfyui.cyclist",
     async setup() {
+        function replace_counter(str) {
+            let counter = str.match(/\d+$/)
+            if (counter) return str.replace(/\d+$/, String(parseInt(counter) + 1))
+            else return str + "_2";
+        }
+
+        function InterruptListener(event) {
+            let show_popup = false // Should be extra sure it will not trigger if not working with cycles
+            let popup_text = ""
+            if (cyclist_states["InterruptMessage"]) {
+                show_popup = true
+                popup_text = cyclist_states["InterruptMessage"]
+            }
+            for (var node_index in app.graph._nodes) {
+                let node = app.graph._nodes[node_index]
+                if (node.type === "LoopManager") {
+                    let increment = "never"
+                    let inc_widget = node.widgets?.find((w) => w.name === 'increment')
+                    if (inc_widget) {
+                        increment = inc_widget.value
+                    }
+                    else if (cyclist_states["LoopManagerNode" + String(node.id)]) {
+                        increment = cyclist_states["LoopManagerNode" + String(node.id)]
+                    }
+                    if (increment && (increment === "on_any_interrupt" || cyclist_states["InterruptMessage"] && increment === "by_interrupt_node")) {
+                        let id_widget = node.widgets?.find((w) => w.name === 'loop_id')
+                        if (id_widget) {
+                            let new_value = replace_counter(id_widget.value)
+                            show_popup = true
+                            if (popup_text != "") popup_text += "\n"
+                            popup_text += "loop_id changed: \"" + id_widget.value + "\" -> \"" + new_value + "\""
+                            id_widget.value = new_value
+                        }
+                    }
+                }
+            }
+            cyclist_states["InterruptMessage"] = null
+            if (show_popup) app.ui.dialog.show(popup_text)
+        }
+        api.addEventListener("execution_interrupted", InterruptListener);
+
         function popupMessageHandler(event) {
             if (event.detail.stop) {
-                app.ui.dialog.show(event.detail.message)
+                //app.ui.dialog.show(event.detail.message)
+                cyclist_states["InterruptMessage"] = event.detail.message
                 cyclist_states["InterruptNode"+app.runningNodeId] = "Interrupt was here!"
                 if (app.ui.autoQueueMode === "instant") {
                     // Prevent short circuit in "insant" mode: queue, interrupt, queue, interrupt...
@@ -34,7 +77,10 @@ app.registerExtension({
                     if(auto_queue_checkbox) auto_queue_checkbox.checked = false;
                 }
             }
-            else cyclist_states["InterruptNode"+app.runningNodeId] = null
+            else {
+                cyclist_states["InterruptMessage"] = null
+                cyclist_states["InterruptNode"+app.runningNodeId] = null
+            }
         }
         api.addEventListener("cyclist.message.popup", popupMessageHandler);
 
@@ -95,15 +141,64 @@ app.registerExtension({
                     }
                 }
             }
-            function replace_counter(str) {
-                let counter = str.match(/\d+$/)
-                if (counter) return str.replace(/\d+$/, String(parseInt(counter) + 1))
-                else return str + "_2";
-            }
         }
     },
 
     async beforeRegisterNodeDef(nodeType, nodeData, app) {
+        function getLoopID(node) {
+            let loop_id_widget = node.widgets?.find((w) => w.name === 'loop_id')
+            if (!loop_id_widget) loop_id_widget = node.widgets?.find((w) => w.name === 'filename');
+            let loop_id_input = node.inputs?.find((i) => i.name === 'loop_id')
+            if (!loop_id_input) loop_id_input = node.inputs?.find((i) => i.name === 'filename')
+            if (loop_id_input) {
+                if (!loop_id_input.link) return null
+                let loop_link = app.graph.links[loop_id_input.link]
+                if (!loop_link) return null
+                let origin_node = node
+                do {
+                    origin_node = app.graph._nodes_by_id[loop_link.origin_id]
+                    if (origin_node && origin_node.type === "PrimitiveNode") {
+                        loop_id_widget = origin_node?.widgets.find((w) => w.name === "value")
+                    }
+                    if (origin_node && origin_node.type === "LoopManager") {
+                        loop_id_widget = origin_node?.widgets.find((w) => w.name === "loop_id")
+                    }
+                    if (origin_node && origin_node.type === "Reroute") {
+                        loop_id_input = origin_node.inputs[0]
+                        if (!loop_id_input.link) return null
+                        loop_link = app.graph.links[loop_id_input.link]
+                        if (!loop_link) return null
+                    }
+                } while (origin_node.type === "Reroute");
+            }
+            if (loop_id_widget) return loop_id_widget.value;
+            return null
+        };
+        if (nodeData.name === "LoopManager") {
+            nodeType.prototype.IS_CYCLIST_IO = true
+
+            const onExecuted = nodeType.prototype.onExecuted
+            nodeType.prototype.onExecuted = function (message) {
+				onExecuted?.apply(this, arguments)
+
+                let memory_widget = this.widgets?.find((w) => w.name === 'memory_content')
+                if (!memory_widget) {
+                    const new_widget = ComfyWidgets["STRING"](this, "memory_content", ["STRING", { multiline: true }], app).widget
+                    new_widget.inputEl.readOnly = true
+                    new_widget.inputEl.style.opacity = 0.6
+                    //new_widget.value = message.memory_content[0]
+                    //this.addCustomWidget(new_widget)
+
+                    memory_widget = this.widgets?.find((w) => w.name === 'memory_content')
+                }
+                if (memory_widget) memory_widget.value = message.memory_content[0];
+				this.onResize?.(this.size);
+
+                cyclist_states["LoopManagerNode" + String(this.id)] = message.increment[0]
+			};
+
+            nodeType.prototype.computeSize = () => [220, 100] // Hardcoded min width/height
+        };
         if (nodeData.category === "cyclist/Write") {
             nodeType.prototype.IS_CYCLIST_IO = true
 
@@ -120,19 +215,22 @@ app.registerExtension({
                     let state_id_loop = message.loop_id[0] + "." + to_memory_input.type
                     cyclist_states[state_id_loop] = state
                 }
+
+                for (var node_index in app.graph._nodes) {
+                    if (app.graph._nodes[node_index].type === "LoopManager") {
+                        let memory_widget = app.graph._nodes[node_index].widgets?.find((w) => w.name === 'memory_content')
+                        if (memory_widget) memory_widget.value = message.memory_content[0]
+                    }
+                }
 			};
             const onDrawForeground = nodeType.prototype.onDrawForeground;
 		    nodeType.prototype.onDrawForeground = function (ctx) {
                 const r = onDrawForeground?.apply?.(this, arguments)
                 
-                let state_id_loop = null
-                let loop_id_widget = this.widgets?.find((w) => w.name === 'loop_id')
-                if (!loop_id_widget) loop_id_widget = this.widgets?.find((w) => w.name === 'filename');
+                let loop_id = getLoopID(this)
                 let to_memory_input = this.inputs?.find((i) => i.name === "to_memory")
                 if (!to_memory_input && this.inputs && this.inputs.length > 0) to_memory_input = this.inputs[0];
-                if (loop_id_widget && to_memory_input) state_id_loop = loop_id_widget.value + "." + to_memory_input.type;
-                
-                if (state_id_loop) drawBadge(ctx, cyclist_states[state_id_loop])
+                if (loop_id && to_memory_input) drawBadge(ctx, cyclist_states[loop_id + "." + to_memory_input.type])
                 //if (!state) state = cyclist_states[String(this.id)]
 
                 return r
@@ -145,18 +243,12 @@ app.registerExtension({
 		    nodeType.prototype.onDrawForeground = function (ctx) {
                 const r = onDrawForeground?.apply?.(this, arguments)
                 
-                let state_id_loop = null
-                let loop_id_widget = this.widgets?.find((w) => w.name === 'loop_id')
-                if (!loop_id_widget) loop_id_widget = this.widgets?.find((w) => w.name === 'filename');
+                let loop_id = getLoopID(this)
                 let to_memory_output = null
                 if (this.outputs && this.outputs.length > 0) to_memory_output = this.outputs[0];
-                if (loop_id_widget && to_memory_output) state_id_loop = loop_id_widget.value + "." + to_memory_output.type;
-                
-                let state = null
-                if (state_id_loop) state = cyclist_states[state_id_loop]
+                if (loop_id && to_memory_output) drawBadge(ctx, cyclist_states[loop_id + "." + to_memory_output.type])
                 //if (!state) state = cyclist_states[String(this.id)]
-                
-                drawBadge(ctx, state)
+
                 return r
             }
         }
@@ -167,11 +259,8 @@ app.registerExtension({
 		    nodeType.prototype.onDrawForeground = function (ctx) {
                 const r = onDrawForeground?.apply?.(this, arguments)
                 
-                let state_id_loop = null
-                let loop_id_widget = this.widgets?.find((w) => w.name === 'loop_id')
-                if (loop_id_widget) state_id_loop = loop_id_widget.value + ".LoopTimer";
-                
-                if (state_id_loop) drawBadge(ctx, cyclist_states[state_id_loop])
+                let loop_id = getLoopID(this)
+                if (loop_id) drawBadge(ctx, cyclist_states[loop_id + ".LoopTimer"])
                 //if (!state) state = cyclist_states[String(this.id)]
                 
                 return r

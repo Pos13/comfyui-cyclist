@@ -1,6 +1,6 @@
 {
-  "last_node_id": 77,
-  "last_link_id": 129,
+  "last_node_id": 79,
+  "last_link_id": 133,
   "nodes": [
     {
       "id": 29,
@@ -14,7 +14,7 @@
         60
       ],
       "flags": {},
-      "order": 15,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -165,65 +165,6 @@
       }
     },
     {
-      "id": 3,
-      "type": "KSampler",
-      "pos": [
-        1020,
-        130
-      ],
-      "size": {
-        "0": 280,
-        "1": 262
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 29
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 4
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 6
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 39
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            7
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        7187357757860,
-        "randomize",
-        26,
-        7,
-        "dpmpp_3m_sde_gpu",
-        "karras",
-        1
-      ]
-    },
-    {
       "id": 5,
       "type": "EmptyLatentImage",
       "pos": [
@@ -271,7 +212,7 @@
         "1": 54
       },
       "flags": {},
-      "order": 14,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -356,7 +297,7 @@
         "1": 120.00003051757812
       },
       "flags": {},
-      "order": 10,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -438,7 +379,7 @@
         "1": 120.00003051757812
       },
       "flags": {},
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
@@ -474,65 +415,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 74,
-      "type": "Text String",
-      "pos": [
-        90,
-        680
-      ],
-      "size": [
-        210,
-        190
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            124
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            126
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Right Answers",
-      "properties": {
-        "Node name for S&R": "Text String"
-      },
-      "widgets_values": [
-        "two",
-        "yes",
-        "",
-        ""
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 76,
       "type": "CyclistCompare",
       "pos": [
@@ -544,7 +426,7 @@
         "1": 80
       },
       "flags": {},
-      "order": 13,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -583,12 +465,12 @@
         330,
         340
       ],
-      "size": [
-        210,
-        80
-      ],
+      "size": {
+        "0": 210,
+        "1": 80
+      },
       "flags": {},
-      "order": 12,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -632,7 +514,7 @@
         "1": 50
       },
       "flags": {},
-      "order": 17,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -672,7 +554,7 @@
         "1": 100
       },
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -752,6 +634,101 @@
       "bgcolor": "#353"
     },
     {
+      "id": 77,
+      "type": "OverrideImage",
+      "pos": [
+        1500,
+        130
+      ],
+      "size": [
+        320,
+        270
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 129
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": 132,
+          "widget": {
+            "name": "filename"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OverrideImage"
+      },
+      "widgets_values": [
+        "BLIPTested_1"
+      ]
+    },
+    {
+      "id": 74,
+      "type": "Text String",
+      "pos": [
+        90,
+        720
+      ],
+      "size": {
+        "0": 210,
+        "1": 190
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            124
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            126
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Right Answers",
+      "properties": {
+        "Node name for S&R": "Text String"
+      },
+      "widgets_values": [
+        "two",
+        "yes",
+        "",
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
       "id": 73,
       "type": "ReloadImage",
       "pos": [
@@ -763,13 +740,21 @@
         60
       ],
       "flags": {},
-      "order": 5,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
           "name": "fallback",
           "type": "IMAGE",
           "link": 122
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": 133,
+          "widget": {
+            "name": "filename"
+          }
         }
       ],
       "outputs": [
@@ -792,32 +777,139 @@
       ]
     },
     {
-      "id": 77,
-      "type": "OverrideImage",
+      "id": 79,
+      "type": "Reroute",
       "pos": [
-        1500,
-        130
+        1209.6,
+        670
       ],
       "size": [
-        320,
-        270
+        90.4,
+        26
       ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 131,
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            132
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        1020,
+        130
+      ],
+      "size": {
+        "0": 280,
+        "1": 262
+      },
       "flags": {},
       "order": 18,
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 129
+          "name": "model",
+          "type": "MODEL",
+          "link": 29
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 6
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            7
+          ],
+          "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "OverrideImage"
+        "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        "BLIPTested_1"
+        263288782866168,
+        "randomize",
+        26,
+        7,
+        "dpmpp_3m_sde_gpu",
+        "karras",
+        1
       ]
+    },
+    {
+      "id": 78,
+      "type": "LoopManager",
+      "pos": [
+        -390,
+        670
+      ],
+      "size": [
+        220,
+        240
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            131,
+            133
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoopManager"
+      },
+      "widgets_values": [
+        "BLIPTested_1",
+        "by_interrupt_node",
+        "BLIPTested_15:\n(#1)IMAGE: BLIPTested_15.png\n\nBLIPTested_14:\n(#1)IMAGE: BLIPTested_14.png\n\nScore_1:\n(#4)FLOAT: 0.9399489164352417\n\nAestheticArt_1:\n(#11)IMAGE: AestheticArt_1.png"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -1012,6 +1104,30 @@
       77,
       0,
       "IMAGE"
+    ],
+    [
+      131,
+      78,
+      0,
+      79,
+      0,
+      "*"
+    ],
+    [
+      132,
+      79,
+      0,
+      77,
+      1,
+      "STRING"
+    ],
+    [
+      133,
+      78,
+      0,
+      73,
+      1,
+      "STRING"
     ]
   ],
   "groups": [
@@ -1021,7 +1137,7 @@
         -400,
         266,
         950,
-        634
+        654
       ],
       "color": "#3f789e",
       "font_size": 24,

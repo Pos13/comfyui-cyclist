@@ -1,6 +1,6 @@
 {
-  "last_node_id": 83,
-  "last_link_id": 146,
+  "last_node_id": 86,
+  "last_link_id": 153,
   "nodes": [
     {
       "id": 26,
@@ -14,7 +14,7 @@
         26
       ],
       "flags": {},
-      "order": 3,
+      "order": 4,
       "mode": 0,
       "inputs": [
         {
@@ -50,7 +50,7 @@
         26
       ],
       "flags": {},
-      "order": 6,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -122,7 +122,7 @@
         "1": 262
       },
       "flags": {},
-      "order": 9,
+      "order": 12,
       "mode": 0,
       "inputs": [
         {
@@ -160,7 +160,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        349453498963304,
+        618650275299421,
         "randomize",
         18,
         4.5,
@@ -168,57 +168,6 @@
         "normal",
         1
       ]
-    },
-    {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        190,
-        20
-      ],
-      "size": {
-        "0": 300,
-        "1": 100
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            28
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            3,
-            5,
-            135
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            26
-          ],
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "526mixV15.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
     },
     {
       "id": 7,
@@ -232,7 +181,7 @@
         "1": 76
       },
       "flags": {},
-      "order": 5,
+      "order": 6,
       "mode": 0,
       "inputs": [
         {
@@ -273,7 +222,7 @@
         "1": 50
       },
       "flags": {},
-      "order": 11,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -302,94 +251,6 @@
       }
     },
     {
-      "id": 79,
-      "type": "CLIPTextEncode",
-      "pos": [
-        520,
-        -80
-      ],
-      "size": {
-        "0": 210,
-        "1": 54
-      },
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 135
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 134,
-          "widget": {
-            "name": "text"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            146
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        ""
-      ]
-    },
-    {
-      "id": 83,
-      "type": "ConditioningConcat",
-      "pos": [
-        1000,
-        -80
-      ],
-      "size": [
-        250,
-        50
-      ],
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "conditioning_to",
-          "type": "CONDITIONING",
-          "link": 146
-        },
-        {
-          "name": "conditioning_from",
-          "type": "CONDITIONING",
-          "link": 145
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            144
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ConditioningConcat"
-      }
-    },
-    {
       "id": 6,
       "type": "CLIPTextEncode",
       "pos": [
@@ -401,7 +262,7 @@
         "1": 90
       },
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -431,18 +292,102 @@
       "bgcolor": "#353"
     },
     {
+      "id": 82,
+      "type": "OverrideImage",
+      "pos": [
+        1480,
+        130
+      ],
+      "size": [
+        320,
+        270
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 141
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": 152,
+          "widget": {
+            "name": "filename"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OverrideImage"
+      },
+      "widgets_values": [
+        "Chimera_1"
+      ]
+    },
+    {
+      "id": 80,
+      "type": "RecallConditioning",
+      "pos": [
+        760,
+        150
+      ],
+      "size": [
+        210,
+        50
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "fallback",
+          "type": "CONDITIONING",
+          "link": 137
+        },
+        {
+          "name": "loop_id",
+          "type": "STRING",
+          "link": 150,
+          "widget": {
+            "name": "loop_id"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            138,
+            147
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RecallConditioning"
+      },
+      "widgets_values": [
+        "Chimera_1"
+      ]
+    },
+    {
       "id": 77,
       "type": "ImpactWildcardProcessor",
       "pos": [
-        190,
-        -250
+        170,
+        400
       ],
       "size": {
         "0": 300,
         "1": 222
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -460,9 +405,9 @@
       },
       "widgets_values": [
         "__jumbo/creatures/animals__",
-        "chameleon",
+        "llama",
         true,
-        1063733259038353,
+        1108012394795937,
         "randomize",
         "Select the Wildcard to add to the text"
       ],
@@ -470,24 +415,83 @@
       "bgcolor": "#353"
     },
     {
-      "id": 80,
-      "type": "RecallConditioning",
+      "id": 4,
+      "type": "CheckpointLoaderSimple",
       "pos": [
-        760,
-        150
+        170,
+        20
+      ],
+      "size": {
+        "0": 300,
+        "1": 100
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            28
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            3,
+            5,
+            135
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            26
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "526mixV15.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 79,
+      "type": "CLIPTextEncode",
+      "pos": [
+        520,
+        570
       ],
       "size": {
         "0": 210,
-        "1": 60
+        "1": 54
       },
       "flags": {},
-      "order": 8,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
-          "name": "fallback",
-          "type": "CONDITIONING",
-          "link": 137
+          "name": "clip",
+          "type": "CLIP",
+          "link": 135
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 134,
+          "widget": {
+            "name": "text"
+          }
         }
       ],
       "outputs": [
@@ -495,39 +499,87 @@
           "name": "CONDITIONING",
           "type": "CONDITIONING",
           "links": [
-            138,
-            145
+            148
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "RecallConditioning"
+        "Node name for S&R": "CLIPTextEncode"
       },
       "widgets_values": [
-        "Chimera_1"
+        ""
       ]
+    },
+    {
+      "id": 83,
+      "type": "ConditioningConcat",
+      "pos": [
+        1000,
+        550
+      ],
+      "size": {
+        "0": 253.60000610351562,
+        "1": 50
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "conditioning_to",
+          "type": "CONDITIONING",
+          "link": 147
+        },
+        {
+          "name": "conditioning_from",
+          "type": "CONDITIONING",
+          "link": 148
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            144
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConditioningConcat"
+      }
     },
     {
       "id": 81,
       "type": "MemorizeConditioning",
       "pos": [
-        1280,
-        -80
+        1480,
+        550
       ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
+      "size": [
+        210,
+        50
+      ],
       "flags": {},
-      "order": 12,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
           "name": "to_memory",
           "type": "CONDITIONING",
           "link": 144
+        },
+        {
+          "name": "loop_id",
+          "type": "STRING",
+          "link": 153,
+          "widget": {
+            "name": "loop_id"
+          }
         }
       ],
       "properties": {
@@ -538,31 +590,117 @@
       ]
     },
     {
-      "id": 82,
-      "type": "OverrideImage",
+      "id": 85,
+      "type": "Reroute",
       "pos": [
-        1480,
-        130
+        720,
+        670
       ],
-      "size": {
-        "0": 320,
-        "1": 270
-      },
+      "size": [
+        90.4,
+        26
+      ],
       "flags": {},
-      "order": 13,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 141
+          "name": "",
+          "type": "*",
+          "link": 149,
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            150,
+            151
+          ],
+          "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "OverrideImage"
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 86,
+      "type": "Reroute",
+      "pos": [
+        1170,
+        670
+      ],
+      "size": [
+        90.4,
+        26
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 151,
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            152,
+            153
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 84,
+      "type": "LoopManager",
+      "pos": [
+        170,
+        670
+      ],
+      "size": [
+        300,
+        140
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            149
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoopManager"
       },
       "widgets_values": [
-        "Chimera_1"
+        "Chimera_2",
+        "never",
+        "Chimera_2:\n(#7)CONDITIONING: -- exists --\n(#7)IMAGE: Chimera_2.png\n\nChimera_1:\n(#4)CONDITIONING: -- exists --\n(#4)IMAGE: Chimera_1.png\n\nCatStack_2:\n(#1)INT: 1\n(#1)LATENT: CatStack_2.latent\n(#1)IMAGE: CatStack_2.png\n\nCatStack_1:\n(#6)INT: 6\n(#4)LATENT: CatStack_1.latent\n(#2)IMAGE: CatStack_1.png"
       ]
     }
   ],
@@ -688,20 +826,60 @@
       "CONDITIONING"
     ],
     [
-      145,
+      147,
       80,
+      0,
+      83,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      148,
+      79,
       0,
       83,
       1,
       "CONDITIONING"
     ],
     [
-      146,
-      79,
+      149,
+      84,
       0,
-      83,
+      85,
       0,
-      "CONDITIONING"
+      "*"
+    ],
+    [
+      150,
+      85,
+      0,
+      80,
+      1,
+      "STRING"
+    ],
+    [
+      151,
+      85,
+      0,
+      86,
+      0,
+      "*"
+    ],
+    [
+      152,
+      86,
+      0,
+      82,
+      1,
+      "STRING"
+    ],
+    [
+      153,
+      86,
+      0,
+      81,
+      1,
+      "STRING"
     ]
   ],
   "groups": [],

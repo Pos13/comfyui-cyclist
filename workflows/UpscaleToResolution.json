@@ -1,13 +1,13 @@
 {
-  "last_node_id": 164,
-  "last_link_id": 317,
+  "last_node_id": 178,
+  "last_link_id": 343,
   "nodes": [
     {
       "id": 46,
       "type": "MathExpression|pysssss",
       "pos": [
         680,
-        180
+        210
       ],
       "size": {
         "0": 210,
@@ -63,7 +63,7 @@
       "type": "MathExpression|pysssss",
       "pos": [
         680,
-        350
+        380
       ],
       "size": {
         "0": 210,
@@ -119,7 +119,7 @@
       "type": "Reroute",
       "pos": [
         680,
-        70
+        100
       ],
       "size": [
         75,
@@ -157,7 +157,7 @@
       "type": "Reroute",
       "pos": [
         680,
-        110
+        140
       ],
       "size": [
         75,
@@ -195,7 +195,7 @@
       "type": "MathExpression|pysssss",
       "pos": [
         920,
-        660
+        690
       ],
       "size": {
         "0": 210,
@@ -253,153 +253,11 @@
       ]
     },
     {
-      "id": 120,
-      "type": "VAELoader",
-      "pos": [
-        -100,
-        -300
-      ],
-      "size": {
-        "0": 450,
-        "1": 60
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            201
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader"
-      },
-      "widgets_values": [
-        "vae-ft-mse-840000-ema-pruned.vae.pt"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 114,
-      "type": "Reroute",
-      "pos": [
-        1130.8,
-        -100
-      ],
-      "size": [
-        149.2,
-        26
-      ],
-      "flags": {},
-      "order": 17,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 181
-        }
-      ],
-      "outputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "links": [
-            203
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
-      "id": 127,
-      "type": "Reroute",
-      "pos": [
-        1205,
-        -130
-      ],
-      "size": [
-        75,
-        26
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 201
-        }
-      ],
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            207
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
-      "id": 128,
-      "type": "Reroute",
-      "pos": [
-        1198,
-        -450
-      ],
-      "size": [
-        82,
-        26
-      ],
-      "flags": {},
-      "order": 33,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 202
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            225
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
       "id": 139,
       "type": "Reroute",
       "pos": [
-        3048,
-        -240
+        3050,
+        -250
       ],
       "size": [
         82,
@@ -434,8 +292,8 @@
       "id": 138,
       "type": "Reroute",
       "pos": [
-        2989.2,
-        -200
+        2990,
+        -210
       ],
       "size": [
         140.8,
@@ -470,8 +328,8 @@
       "id": 137,
       "type": "Reroute",
       "pos": [
-        2989.2,
-        -160
+        2990,
+        -170
       ],
       "size": [
         140.8,
@@ -507,14 +365,14 @@
       "type": "Note",
       "pos": [
         -100,
-        410
+        440
       ],
       "size": {
         "0": 210,
         "1": 410
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "title": "Common Resolutions",
       "properties": {
@@ -531,7 +389,7 @@
       "type": "MathExpression|pysssss",
       "pos": [
         690,
-        590
+        620
       ],
       "size": {
         "0": 210,
@@ -544,7 +402,7 @@
         {
           "name": "a",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 313
+          "link": 325
         },
         {
           "name": "b",
@@ -586,7 +444,7 @@
       "type": "MathExpression|pysssss",
       "pos": [
         690,
-        750
+        780
       ],
       "size": {
         "0": 210,
@@ -599,7 +457,7 @@
         {
           "name": "a",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 307
+          "link": 331
         },
         {
           "name": "b",
@@ -640,8 +498,8 @@
       "id": 130,
       "type": "Reroute",
       "pos": [
-        2885,
-        -120
+        2880,
+        -130
       ],
       "size": [
         75,
@@ -677,8 +535,8 @@
       "id": 131,
       "type": "Reroute",
       "pos": [
-        3305,
-        -120
+        3300,
+        -130
       ],
       "size": [
         75,
@@ -710,47 +568,11 @@
       }
     },
     {
-      "id": 129,
-      "type": "Reroute",
-      "pos": [
-        2380.8,
-        -100
-      ],
-      "size": [
-        149.2,
-        26
-      ],
-      "flags": {},
-      "order": 23,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 203
-        }
-      ],
-      "outputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "links": [
-            204
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
       "id": 56,
       "type": "MathExpression|pysssss",
       "pos": [
         1180,
-        590
+        620
       ],
       "size": {
         "0": 210,
@@ -763,7 +585,7 @@
         {
           "name": "a",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 314
+          "link": 326
         },
         {
           "name": "b",
@@ -802,95 +624,11 @@
       ]
     },
     {
-      "id": 121,
-      "type": "CLIPSetLastLayer",
-      "pos": [
-        380,
-        -400
-      ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 194
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            195
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP Skip",
-      "properties": {
-        "Node name for S&R": "CLIPSetLastLayer"
-      },
-      "widgets_values": [
-        -1
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 122,
-      "type": "CLIPTextEncode",
-      "pos": [
-        850,
-        -390
-      ],
-      "size": {
-        "0": 430,
-        "1": 130
-      },
-      "flags": {},
-      "order": 35,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 197
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            223
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Positive",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "by Brian Mashburn,by josan gonzalez,by fernanda suarez pascal blanche, grandiose landscape where a bubble-shaped dome is situated at the center, transporting us to a world of another dimension. The surroundings are filled with gigantic purple trees, featuring spherical shapes, organic branches, and luminous blue grass that adorn the vegetation. Create a complex yet beautiful picture."
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 123,
       "type": "CLIPTextEncode",
       "pos": [
         850,
-        -220
+        -230
       ],
       "size": {
         "0": 430,
@@ -928,94 +666,11 @@
       "bgcolor": "#353"
     },
     {
-      "id": 119,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        -100,
-        -450
-      ],
-      "size": {
-        "0": 450,
-        "1": 100
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            193
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            194
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "Neutrino_beta_(subjects_merge_art)-clip1.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 113,
-      "type": "UpscaleModelLoader",
-      "pos": [
-        -100,
-        -190
-      ],
-      "size": {
-        "0": 450,
-        "1": 60
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "UPSCALE_MODEL",
-          "type": "UPSCALE_MODEL",
-          "links": [
-            181
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UpscaleModelLoader"
-      },
-      "widgets_values": [
-        "001_classicalSR_DF2K_s64w8_SwinIR-M_x4.pth"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 42,
       "type": "MathExpression|pysssss",
       "pos": [
         420,
-        200
+        230
       ],
       "size": {
         "0": 210,
@@ -1033,12 +688,12 @@
         {
           "name": "b",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 311
+          "link": 323
         },
         {
           "name": "c",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 310
+          "link": 329
         }
       ],
       "outputs": [
@@ -1071,71 +726,11 @@
       ]
     },
     {
-      "id": 45,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        420,
-        370
-      ],
-      "size": {
-        "0": 210,
-        "1": 116.00006103515625
-      },
-      "flags": {},
-      "order": 19,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 255
-        },
-        {
-          "name": "b",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 312
-        },
-        {
-          "name": "c",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 306
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            95,
-            97,
-            102,
-            110,
-            260
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Crop Height",
-      "properties": {
-        "Node name for S&R": "MathExpression|pysssss"
-      },
-      "widgets_values": [
-        "min(a.height, a.width * c / b)"
-      ]
-    },
-    {
       "id": 57,
       "type": "MathExpression|pysssss",
       "pos": [
         1180,
-        760
+        790
       ],
       "size": {
         "0": 210,
@@ -1148,7 +743,7 @@
         {
           "name": "a",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 308
+          "link": 332
         },
         {
           "name": "b",
@@ -1198,7 +793,7 @@
         26
       ],
       "flags": {},
-      "order": 68,
+      "order": 69,
       "mode": 0,
       "inputs": [
         {
@@ -1227,87 +822,11 @@
       }
     },
     {
-      "id": 135,
-      "type": "Reroute",
-      "pos": [
-        2170,
-        470
-      ],
-      "size": [
-        82,
-        26
-      ],
-      "flags": {},
-      "order": 69,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 217,
-          "pos": [
-            41,
-            0
-          ]
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            273
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": true
-      }
-    },
-    {
-      "id": 149,
-      "type": "OverrideImage",
-      "pos": [
-        2270,
-        530
-      ],
-      "size": [
-        1680,
-        830
-      ],
-      "flags": {},
-      "order": 70,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 273
-        },
-        {
-          "name": "filename",
-          "type": "STRING",
-          "link": 294,
-          "widget": {
-            "name": "filename"
-          }
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "OverrideImage"
-      },
-      "widgets_values": [
-        "ForLoop_1"
-      ]
-    },
-    {
       "id": 140,
       "type": "MathExpression|pysssss",
       "pos": [
-        1535.6612222656258,
-        742.8563997680666
+        1530,
+        770
       ],
       "size": {
         "0": 210,
@@ -1363,12 +882,12 @@
       "type": "MemorizeInt",
       "pos": [
         2030,
-        740
+        770
       ],
-      "size": [
-        210,
-        50
-      ],
+      "size": {
+        "0": 210,
+        "1": 54
+      },
       "flags": {},
       "order": 48,
       "mode": 0,
@@ -1404,14 +923,14 @@
       "type": "MathExpression|pysssss",
       "pos": [
         1910,
-        390
+        420
       ],
       "size": {
         "0": 210,
         "1": 116.00001525878906
       },
       "flags": {},
-      "order": 51,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -1460,14 +979,14 @@
       "type": "MathExpression|pysssss",
       "pos": [
         1910,
-        560
+        590
       ],
       "size": {
         "0": 210,
         "1": 116
       },
       "flags": {},
-      "order": 52,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -1512,74 +1031,18 @@
       ]
     },
     {
-      "id": 79,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        1655.6612222656258,
-        132.8563997680664
-      ],
-      "size": {
-        "0": 210,
-        "1": 120
-      },
-      "flags": {},
-      "order": 49,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 288
-        },
-        {
-          "name": "b",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": null
-        },
-        {
-          "name": "c",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            275
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Width",
-      "properties": {
-        "Node name for S&R": "MathExpression|pysssss"
-      },
-      "widgets_values": [
-        "a.width"
-      ]
-    },
-    {
       "id": 152,
       "type": "CyclistCompare",
       "pos": [
         1910,
-        270
+        300
       ],
       "size": {
         "0": 210,
         "1": 80
       },
       "flags": {},
-      "order": 57,
+      "order": 58,
       "mode": 0,
       "inputs": [
         {
@@ -1590,7 +1053,7 @@
         {
           "name": "thing2",
           "type": "*",
-          "link": 316
+          "link": 333
         }
       ],
       "outputs": [
@@ -1612,72 +1075,16 @@
       ]
     },
     {
-      "id": 76,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        1655.6612222656258,
-        302.8563997680663
-      ],
-      "size": {
-        "0": 210,
-        "1": 116.00001525878906
-      },
-      "flags": {},
-      "order": 50,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 289
-        },
-        {
-          "name": "b",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": null
-        },
-        {
-          "name": "c",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            278
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Height",
-      "properties": {
-        "Node name for S&R": "MathExpression|pysssss"
-      },
-      "widgets_values": [
-        "a.height"
-      ]
-    },
-    {
       "id": 153,
       "type": "RecallInt",
       "pos": [
         1420,
-        430
+        460
       ],
-      "size": [
-        210,
-        60
-      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
       "flags": {},
       "order": 31,
       "mode": 0,
@@ -1717,11 +1124,1148 @@
       ]
     },
     {
+      "id": 74,
+      "type": "Interrupt",
+      "pos": [
+        2140,
+        80
+      ],
+      "size": [
+        150,
+        60
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "any_in",
+          "type": "*",
+          "link": 322,
+          "color_on": ""
+        },
+        {
+          "name": "stop",
+          "type": "BOOLEAN",
+          "link": 276,
+          "widget": {
+            "name": "stop"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            137
+          ],
+          "shape": 3,
+          "color_on": "#64B5F6",
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Interrupt"
+      },
+      "widgets_values": [
+        false
+      ]
+    },
+    {
+      "id": 115,
+      "type": "ImageScale",
+      "pos": [
+        2680,
+        80
+      ],
+      "size": {
+        "0": 210,
+        "1": 122
+      },
+      "flags": {},
+      "order": 62,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 189
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 187,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 188,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            190
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "bilinear",
+        512,
+        512,
+        "disabled"
+      ]
+    },
+    {
+      "id": 118,
+      "type": "VAEEncode",
+      "pos": [
+        2920,
+        80
+      ],
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 63,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 190
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 206
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            198
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      }
+    },
+    {
+      "id": 84,
+      "type": "KSampler",
+      "pos": [
+        3090,
+        80
+      ],
+      "size": {
+        "0": 220,
+        "1": 250
+      },
+      "flags": {},
+      "order": 64,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 226
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 224
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 222
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 198
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 174,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 175,
+          "widget": {
+            "name": "cfg"
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 176,
+          "widget": {
+            "name": "denoise"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            199
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        592478707900566,
+        "randomize",
+        20,
+        8,
+        "dpmpp_2m",
+        "karras",
+        1
+      ]
+    },
+    {
+      "id": 125,
+      "type": "VAEDecode",
+      "pos": [
+        3340,
+        80
+      ],
+      "size": {
+        "0": 140,
+        "1": 50
+      },
+      "flags": {},
+      "order": 65,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 199
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 209
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            265,
+            266,
+            269
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 146,
+      "type": "ImageScale",
+      "pos": [
+        3750,
+        80
+      ],
+      "size": {
+        "0": 210,
+        "1": 130
+      },
+      "flags": {},
+      "order": 68,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 269
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 270,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 271,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            272
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "KSampler rounding fix",
+      "properties": {
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        512,
+        512,
+        "center"
+      ]
+    },
+    {
+      "id": 145,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        3510,
+        150
+      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {},
+      "order": 66,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 265
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 328
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            270
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Width",
+      "properties": {
+        "Node name for S&R": "MathExpression|pysssss"
+      },
+      "widgets_values": [
+        "min(a.width, b)"
+      ]
+    },
+    {
+      "id": 144,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        3510,
+        310
+      ],
+      "size": {
+        "0": 210,
+        "1": 116.00001525878906
+      },
+      "flags": {},
+      "order": 67,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 266
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 334
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            271
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Height",
+      "properties": {
+        "Node name for S&R": "MathExpression|pysssss"
+      },
+      "widgets_values": [
+        "min(a.height, b)"
+      ]
+    },
+    {
+      "id": 162,
+      "type": "CyclistMathInt",
+      "pos": [
+        130,
+        760
+      ],
+      "size": {
+        "0": 210,
+        "1": 110
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            304,
+            305
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Max Pixel Grouth",
+      "properties": {
+        "Node name for S&R": "CyclistMathInt"
+      },
+      "widgets_values": [
+        "subtraction",
+        512,
+        64
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 124,
+      "type": "LoraLoader",
+      "pos": [
+        600,
+        -460
+      ],
+      "size": {
+        "0": 210,
+        "1": 130
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 193
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 195
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            202
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            196,
+            197
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoraLoader"
+      },
+      "widgets_values": [
+        "Style\\add_detail.safetensors",
+        0.9199999999999999,
+        0.6
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 151,
+      "type": "CyclistCompare",
+      "pos": [
+        1910,
+        160
+      ],
+      "size": {
+        "0": 210,
+        "1": 80
+      },
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "thing1",
+          "type": "*",
+          "link": 275
+        },
+        {
+          "name": "thing2",
+          "type": "*",
+          "link": 327
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            276
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CyclistCompare"
+      },
+      "widgets_values": [
+        "greater or equals"
+      ]
+    },
+    {
+      "id": 110,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        1910,
+        1260
+      ],
+      "size": {
+        "0": 210,
+        "1": 116.00004577636719
+      },
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 342
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 173
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 284
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            176
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "Denoise",
+      "properties": {
+        "Node name for S&R": "MathExpression|pysssss"
+      },
+      "widgets_values": [
+        "a - (b * c)"
+      ]
+    },
+    {
+      "id": 105,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        1180,
+        1150
+      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 338
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 340
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 162
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            171
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "title": "CFG Grouth (-)",
+      "properties": {
+        "Node name for S&R": "MathExpression|pysssss"
+      },
+      "widgets_values": [
+        "(a - b) / max(1, (c - 1))"
+      ]
+    },
+    {
+      "id": 136,
+      "type": "Reroute",
+      "pos": [
+        1910,
+        720
+      ],
+      "size": [
+        90.4,
+        26
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 263,
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            293,
+            294
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 120,
+      "type": "VAELoader",
+      "pos": [
+        -100,
+        -310
+      ],
+      "size": [
+        440,
+        60
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            201
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.vae.pt"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 119,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -100,
+        -460
+      ],
+      "size": [
+        440,
+        100
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            193
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            194
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "Neutrino_beta_(subjects_merge_art)-clip1.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 121,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        380,
+        -410
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 194
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            195
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Skip",
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 91,
+      "type": "Reroute",
+      "pos": [
+        1189.6,
+        -80
+      ],
+      "size": [
+        90.4,
+        26
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 318,
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            263,
+            291,
+            292
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 114,
+      "type": "Reroute",
+      "pos": [
+        1130.8,
+        -110
+      ],
+      "size": [
+        149.2,
+        26
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 181
+        }
+      ],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            203
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 127,
+      "type": "Reroute",
+      "pos": [
+        1205,
+        -140
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 201
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            207
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 128,
+      "type": "Reroute",
+      "pos": [
+        1198,
+        -460
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 202
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            225
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 122,
+      "type": "CLIPTextEncode",
+      "pos": [
+        850,
+        -400
+      ],
+      "size": {
+        "0": 430,
+        "1": 130
+      },
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 197
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            223
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Positive",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "by Brian Mashburn,by josan gonzalez,by fernanda suarez pascal blanche, grandiose landscape where a bubble-shaped dome is situated at the center, transporting us to a world of another dimension. The surroundings are filled with gigantic purple trees, featuring spherical shapes, organic branches, and luminous blue grass that adorn the vegetation. Create a complex yet beautiful picture."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 41,
+      "type": "LoadImage",
+      "pos": [
+        -100,
+        80
+      ],
+      "size": [
+        440,
+        310
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            253,
+            254,
+            255,
+            256,
+            257
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ComfyUI_00131_.png",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 129,
+      "type": "Reroute",
+      "pos": [
+        2380,
+        -110
+      ],
+      "size": [
+        149.2,
+        26
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 203
+        }
+      ],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            204
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
       "id": 43,
       "type": "ImageCrop",
       "pos": [
         920,
-        50
+        80
       ],
       "size": {
         "0": 210,
@@ -1791,33 +2335,63 @@
       ]
     },
     {
-      "id": 74,
-      "type": "Interrupt",
+      "id": 113,
+      "type": "UpscaleModelLoader",
       "pos": [
-        2140,
-        50
+        -100,
+        -200
       ],
       "size": [
-        150,
+        440,
         60
       ],
       "flags": {},
-      "order": 58,
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            181
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x_DF2K_SwinIR-M.pth"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 112,
+      "type": "ImageUpscaleWithModel",
+      "pos": [
+        2490,
+        80
+      ],
+      "size": {
+        "0": 161.1999969482422,
+        "1": 50
+      },
+      "flags": {},
+      "order": 61,
       "mode": 0,
       "inputs": [
         {
-          "name": "any_in",
-          "type": "*",
-          "link": 287,
-          "color_on": ""
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 204
         },
         {
-          "name": "stop",
-          "type": "BOOLEAN",
-          "link": 276,
-          "widget": {
-            "name": "stop"
-          }
+          "name": "image",
+          "type": "IMAGE",
+          "link": 179
         }
       ],
       "outputs": [
@@ -1825,33 +2399,30 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            137
+            189
           ],
           "shape": 3,
-          "color_on": "#64B5F6",
           "slot_index": 0
         }
       ],
+      "title": "Upscale Image",
       "properties": {
-        "Node name for S&R": "Interrupt"
-      },
-      "widgets_values": [
-        false
-      ]
+        "Node name for S&R": "ImageUpscaleWithModel"
+      }
     },
     {
       "id": 83,
       "type": "Interrupt",
       "pos": [
         2310,
-        50
+        80
       ],
       "size": [
         150,
         60
       ],
       "flags": {},
-      "order": 59,
+      "order": 60,
       "mode": 0,
       "inputs": [
         {
@@ -1889,412 +2460,29 @@
       ]
     },
     {
-      "id": 112,
-      "type": "ImageUpscaleWithModel",
-      "pos": [
-        2490,
-        50
-      ],
-      "size": {
-        "0": 161.1999969482422,
-        "1": 50
-      },
-      "flags": {},
-      "order": 60,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "upscale_model",
-          "type": "UPSCALE_MODEL",
-          "link": 204
-        },
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 179
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            189
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Upscale Image",
-      "properties": {
-        "Node name for S&R": "ImageUpscaleWithModel"
-      }
-    },
-    {
-      "id": 115,
-      "type": "ImageScale",
-      "pos": [
-        2680,
-        50
-      ],
-      "size": {
-        "0": 210,
-        "1": 122
-      },
-      "flags": {},
-      "order": 61,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 189
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 187,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 188,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            190
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageScale"
-      },
-      "widgets_values": [
-        "bilinear",
-        512,
-        512,
-        "disabled"
-      ]
-    },
-    {
-      "id": 118,
-      "type": "VAEEncode",
-      "pos": [
-        2920,
-        50
-      ],
-      "size": {
-        "0": 140,
-        "1": 50
-      },
-      "flags": {},
-      "order": 62,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "pixels",
-          "type": "IMAGE",
-          "link": 190
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 206
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            198
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEEncode"
-      }
-    },
-    {
-      "id": 84,
-      "type": "KSampler",
-      "pos": [
-        3090,
-        50
-      ],
-      "size": {
-        "0": 220,
-        "1": 250
-      },
-      "flags": {},
-      "order": 63,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 226
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 224
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 222
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 198
-        },
-        {
-          "name": "steps",
-          "type": "INT",
-          "link": 174,
-          "widget": {
-            "name": "steps"
-          }
-        },
-        {
-          "name": "cfg",
-          "type": "FLOAT",
-          "link": 175,
-          "widget": {
-            "name": "cfg"
-          }
-        },
-        {
-          "name": "denoise",
-          "type": "FLOAT",
-          "link": 176,
-          "widget": {
-            "name": "denoise"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            199
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler"
-      },
-      "widgets_values": [
-        422199789638005,
-        "randomize",
-        20,
-        8,
-        "dpmpp_2m",
-        "karras",
-        1
-      ]
-    },
-    {
-      "id": 125,
-      "type": "VAEDecode",
-      "pos": [
-        3340,
-        50
-      ],
-      "size": {
-        "0": 140,
-        "1": 50
-      },
-      "flags": {},
-      "order": 64,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "samples",
-          "type": "LATENT",
-          "link": 199
-        },
-        {
-          "name": "vae",
-          "type": "VAE",
-          "link": 209
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            265,
-            266,
-            269
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAEDecode"
-      }
-    },
-    {
-      "id": 146,
-      "type": "ImageScale",
-      "pos": [
-        3750,
-        50
-      ],
-      "size": {
-        "0": 210,
-        "1": 130
-      },
-      "flags": {},
-      "order": 67,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 269
-        },
-        {
-          "name": "width",
-          "type": "INT",
-          "link": 270,
-          "widget": {
-            "name": "width"
-          }
-        },
-        {
-          "name": "height",
-          "type": "INT",
-          "link": 271,
-          "widget": {
-            "name": "height"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            272
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "KSampler rounding fix",
-      "properties": {
-        "Node name for S&R": "ImageScale"
-      },
-      "widgets_values": [
-        "nearest-exact",
-        512,
-        512,
-        "center"
-      ]
-    },
-    {
-      "id": 145,
+      "id": 76,
       "type": "MathExpression|pysssss",
       "pos": [
-        3510,
-        120
-      ],
-      "size": {
-        "0": 210,
-        "1": 120
-      },
-      "flags": {},
-      "order": 65,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 265
-        },
-        {
-          "name": "b",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 315
-        },
-        {
-          "name": "c",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": null
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            270
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Width",
-      "properties": {
-        "Node name for S&R": "MathExpression|pysssss"
-      },
-      "widgets_values": [
-        "min(a.width, b)"
-      ]
-    },
-    {
-      "id": 144,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        3510,
-        280
+        1660,
+        330
       ],
       "size": {
         "0": 210,
         "1": 116.00001525878906
       },
       "flags": {},
-      "order": 66,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
           "name": "a",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 266
+          "link": 289
         },
         {
           "name": "b",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 309
+          "link": null
         },
         {
           "name": "c",
@@ -2307,7 +2495,7 @@
           "name": "INT",
           "type": "INT",
           "links": [
-            271
+            278
           ],
           "shape": 3,
           "slot_index": 0
@@ -2324,7 +2512,7 @@
         "Node name for S&R": "MathExpression|pysssss"
       },
       "widgets_values": [
-        "min(a.height, b)"
+        "a.height"
       ]
     },
     {
@@ -2332,12 +2520,12 @@
       "type": "ReloadImage",
       "pos": [
         1420,
-        50
+        80
       ],
-      "size": [
-        210,
-        50
-      ],
+      "size": {
+        "0": 210,
+        "1": 54
+      },
       "flags": {},
       "order": 42,
       "mode": 0,
@@ -2361,9 +2549,9 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            287,
             288,
-            289
+            289,
+            321
           ],
           "shape": 3,
           "slot_index": 0
@@ -2377,469 +2565,712 @@
       ]
     },
     {
-      "id": 91,
-      "type": "Reroute",
+      "id": 169,
+      "type": "Images to RGB",
       "pos": [
-        1189.6,
-        -70
-      ],
-      "size": [
-        90.4,
-        26
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 290,
-          "widget": {
-            "name": "value"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            263,
-            291,
-            292
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
-      "id": 136,
-      "type": "Reroute",
-      "pos": [
-        1910,
-        690
-      ],
-      "size": [
-        90.4,
-        26
-      ],
-      "flags": {},
-      "order": 30,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 263,
-          "widget": {
-            "name": "value"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            293,
-            294
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
-      "id": 157,
-      "type": "CyclistMathInt",
-      "pos": [
-        130,
-        920
+        1660,
+        80
       ],
       "size": {
         "0": 210,
-        "1": 110
+        "1": 26
       },
       "flags": {},
-      "order": 4,
+      "order": 51,
       "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 321
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            322
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Images to RGB"
+      }
+    },
+    {
+      "id": 79,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        1660,
+        160
+      ],
+      "size": {
+        "0": 210,
+        "1": 120
+      },
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 288
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": null
+        }
+      ],
       "outputs": [
         {
           "name": "INT",
           "type": "INT",
           "links": [
-            297
+            275
           ],
           "shape": 3,
           "slot_index": 0
-        }
-      ],
-      "title": "Start Steps",
-      "properties": {
-        "Node name for S&R": "CyclistMathInt"
-      },
-      "widgets_values": [
-        "addition",
-        14,
-        0
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 159,
-      "type": "CyclistMathFloat",
-      "pos": [
-        130,
-        1080
-      ],
-      "size": {
-        "0": 210,
-        "1": 110
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "outputs": [
+        },
         {
           "name": "FLOAT",
           "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Width",
+      "properties": {
+        "Node name for S&R": "MathExpression|pysssss"
+      },
+      "widgets_values": [
+        "a.width"
+      ]
+    },
+    {
+      "id": 45,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        420,
+        400
+      ],
+      "size": {
+        "0": 210,
+        "1": 116.00006103515625
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 255
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 324
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 330
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
           "links": [
-            300
+            95,
+            97,
+            102,
+            110,
+            260
           ],
           "shape": 3,
           "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
         }
       ],
-      "title": "End CFG",
+      "title": "Crop Height",
       "properties": {
-        "Node name for S&R": "CyclistMathFloat"
+        "Node name for S&R": "MathExpression|pysssss"
       },
       "widgets_values": [
-        "addition",
-        10,
-        0
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
+        "min(a.height, a.width * c / b)"
+      ]
     },
     {
-      "id": 158,
-      "type": "CyclistMathFloat",
+      "id": 170,
+      "type": "Constant Number",
       "pos": [
-        -100,
-        1030
+        130,
+        440
       ],
       "size": [
         210,
-        110
+        120
       ],
       "flags": {},
       "order": 6,
       "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text"
+          }
+        }
+      ],
       "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
         {
           "name": "FLOAT",
           "type": "FLOAT",
-          "links": [
-            298,
-            299
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Start CFG",
-      "properties": {
-        "Node name for S&R": "CyclistMathFloat"
-      },
-      "widgets_values": [
-        "addition",
-        7,
-        0
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 162,
-      "type": "CyclistMathInt",
-      "pos": [
-        130,
-        730
-      ],
-      "size": [
-        210,
-        110
-      ],
-      "flags": {},
-      "order": 7,
-      "mode": 0,
-      "outputs": [
+          "links": null,
+          "shape": 3
+        },
         {
           "name": "INT",
           "type": "INT",
           "links": [
-            304,
-            305
+            323,
+            324,
+            325,
+            326,
+            327,
+            328
           ],
           "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Max Pixel Grouth",
-      "properties": {
-        "Node name for S&R": "CyclistMathInt"
-      },
-      "widgets_values": [
-        "subtraction",
-        512,
-        64
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 124,
-      "type": "LoraLoader",
-      "pos": [
-        600,
-        -450
-      ],
-      "size": {
-        "0": 210,
-        "1": 130
-      },
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 193
-        },
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 195
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            202
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            196,
-            197
-          ],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LoraLoader"
-      },
-      "widgets_values": [
-        "Style\\add_detail.safetensors",
-        0.9199999999999999,
-        0.6
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 151,
-      "type": "CyclistCompare",
-      "pos": [
-        1910,
-        130
-      ],
-      "size": [
-        210,
-        80
-      ],
-      "flags": {},
-      "order": 56,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "thing1",
-          "type": "*",
-          "link": 275
-        },
-        {
-          "name": "thing2",
-          "type": "*",
-          "link": 317
-        }
-      ],
-      "outputs": [
-        {
-          "name": "BOOLEAN",
-          "type": "BOOLEAN",
-          "links": [
-            276
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CyclistCompare"
-      },
-      "widgets_values": [
-        "greater or equals"
-      ]
-    },
-    {
-      "id": 163,
-      "type": "CyclistMathInt",
-      "pos": [
-        130,
-        570
-      ],
-      "size": [
-        210,
-        110
-      ],
-      "flags": {},
-      "order": 8,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            306,
-            307,
-            308,
-            309,
-            310,
-            316
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Target Height",
-      "properties": {
-        "Node name for S&R": "CyclistMathInt"
-      },
-      "widgets_values": [
-        "addition",
-        1440,
-        0
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 164,
-      "type": "CyclistMathInt",
-      "pos": [
-        130,
-        410
-      ],
-      "size": {
-        "0": 210,
-        "1": 110
-      },
-      "flags": {},
-      "order": 9,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            311,
-            312,
-            313,
-            314,
-            315,
-            317
-          ],
-          "shape": 3,
-          "slot_index": 0
+          "slot_index": 2
         }
       ],
       "title": "Target Width",
       "properties": {
-        "Node name for S&R": "CyclistMathInt"
+        "Node name for S&R": "Constant Number"
       },
       "widgets_values": [
-        "addition",
+        "integer",
         2560,
-        0
+        ""
       ],
       "color": "#232",
       "bgcolor": "#353"
     },
     {
-      "id": 161,
-      "type": "CyclistMathFloat",
+      "id": 171,
+      "type": "Constant Number",
       "pos": [
         130,
-        1240
+        600
       ],
-      "size": {
-        "0": 210,
-        "1": 110
-      },
+      "size": [
+        210,
+        120
+      ],
       "flags": {},
-      "order": 10,
+      "order": 7,
       "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text"
+          }
+        }
+      ],
       "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
         {
           "name": "FLOAT",
           "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "INT",
+          "type": "INT",
           "links": [
-            303
+            329,
+            330,
+            331,
+            332,
+            333,
+            334
           ],
           "shape": 3,
-          "slot_index": 0
+          "slot_index": 2
         }
       ],
-      "title": "End Denoise",
+      "title": "Target Height",
       "properties": {
-        "Node name for S&R": "CyclistMathFloat"
+        "Node name for S&R": "Constant Number"
       },
       "widgets_values": [
-        "addition",
-        0.28,
-        0
+        "integer",
+        1440,
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 172,
+      "type": "Constant Number",
+      "pos": [
+        -100,
+        890
+      ],
+      "size": [
+        210,
+        120
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            335,
+            336
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Start Steps",
+      "properties": {
+        "Node name for S&R": "Constant Number"
+      },
+      "widgets_values": [
+        "integer",
+        28,
+        ""
       ],
       "color": "#223",
       "bgcolor": "#335"
     },
     {
-      "id": 110,
+      "id": 177,
+      "type": "Constant Number",
+      "pos": [
+        -100,
+        1240
+      ],
+      "size": [
+        210,
+        120
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            341,
+            342
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Start Denoise",
+      "properties": {
+        "Node name for S&R": "Constant Number"
+      },
+      "widgets_values": [
+        "float",
+        0.46,
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 176,
+      "type": "Constant Number",
+      "pos": [
+        130,
+        1140
+      ],
+      "size": [
+        210,
+        120
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            340
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "End CFG",
+      "properties": {
+        "Node name for S&R": "Constant Number"
+      },
+      "widgets_values": [
+        "float",
+        10,
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 173,
+      "type": "Constant Number",
+      "pos": [
+        130,
+        980
+      ],
+      "size": [
+        210,
+        120
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            337
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "End Steps",
+      "properties": {
+        "Node name for S&R": "Constant Number"
+      },
+      "widgets_values": [
+        "integer",
+        14,
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 178,
+      "type": "Constant Number",
+      "pos": [
+        130,
+        1310
+      ],
+      "size": [
+        210,
+        120
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            343
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "End Denoise",
+      "properties": {
+        "Node name for S&R": "Constant Number"
+      },
+      "widgets_values": [
+        "float",
+        0.28,
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 174,
+      "type": "Constant Number",
+      "pos": [
+        -100,
+        1070
+      ],
+      "size": [
+        210,
+        120
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "number_as_text",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "number_as_text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "NUMBER",
+          "type": "NUMBER",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            338,
+            339
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "title": "Start CFG",
+      "properties": {
+        "Node name for S&R": "Constant Number"
+      },
+      "widgets_values": [
+        "float",
+        7,
+        ""
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 104,
       "type": "MathExpression|pysssss",
       "pos": [
-        1910,
-        1210
+        1180,
+        980
       ],
       "size": {
         "0": 210,
-        "1": 116.00004577636719
+        "1": 116
+      },
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 336
+        },
+        {
+          "name": "b",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 337
+        },
+        {
+          "name": "c",
+          "type": "INT,FLOAT,IMAGE,LATENT",
+          "link": 163
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            227
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "Steps Grouth (-)",
+      "properties": {
+        "Node name for S&R": "MathExpression|pysssss"
+      },
+      "widgets_values": [
+        "round((a - b) / max(1, (c - 1)))"
+      ]
+    },
+    {
+      "id": 108,
+      "type": "MathExpression|pysssss",
+      "pos": [
+        1910,
+        930
+      ],
+      "size": {
+        "0": 210,
+        "1": 116.00001525878906
       },
       "flags": {},
       "order": 55,
@@ -2848,38 +3279,37 @@
         {
           "name": "a",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 302
+          "link": 335
         },
         {
           "name": "b",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 173
+          "link": 227
         },
         {
           "name": "c",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 284
+          "link": 282
         }
       ],
       "outputs": [
         {
           "name": "INT",
           "type": "INT",
-          "links": [],
+          "links": [
+            174
+          ],
           "shape": 3,
           "slot_index": 0
         },
         {
           "name": "FLOAT",
           "type": "FLOAT",
-          "links": [
-            176
-          ],
-          "shape": 3,
-          "slot_index": 1
+          "links": null,
+          "shape": 3
         }
       ],
-      "title": "Denoise",
+      "title": "Steps",
       "properties": {
         "Node name for S&R": "MathExpression|pysssss"
       },
@@ -2892,20 +3322,20 @@
       "type": "MathExpression|pysssss",
       "pos": [
         1910,
-        1050
+        1100
       ],
       "size": {
         "0": 210,
         "1": 116.00004577636719
       },
       "flags": {},
-      "order": 53,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
           "name": "a",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 299
+          "link": 339
         },
         {
           "name": "b",
@@ -2945,256 +3375,11 @@
       ]
     },
     {
-      "id": 108,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        1910,
-        880
-      ],
-      "size": {
-        "0": 210,
-        "1": 116.00001525878906
-      },
-      "flags": {},
-      "order": 54,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 296
-        },
-        {
-          "name": "b",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 227
-        },
-        {
-          "name": "c",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 282
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            174
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Steps",
-      "properties": {
-        "Node name for S&R": "MathExpression|pysssss"
-      },
-      "widgets_values": [
-        "a - (b * c)"
-      ]
-    },
-    {
-      "id": 104,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        1180,
-        920
-      ],
-      "size": {
-        "0": 210,
-        "1": 116
-      },
-      "flags": {},
-      "order": 46,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 295
-        },
-        {
-          "name": "b",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 297
-        },
-        {
-          "name": "c",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 163
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            227
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Steps Grouth (-)",
-      "properties": {
-        "Node name for S&R": "MathExpression|pysssss"
-      },
-      "widgets_values": [
-        "round((a - b) / max(1, (c - 1)))"
-      ]
-    },
-    {
-      "id": 156,
-      "type": "CyclistMathInt",
-      "pos": [
-        -100,
-        870
-      ],
-      "size": [
-        210,
-        110
-      ],
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [
-            295,
-            296
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Start Steps",
-      "properties": {
-        "Node name for S&R": "CyclistMathInt"
-      },
-      "widgets_values": [
-        "addition",
-        28,
-        0
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 160,
-      "type": "CyclistMathFloat",
-      "pos": [
-        -100,
-        1190
-      ],
-      "size": {
-        "0": 210,
-        "1": 110
-      },
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            301,
-            302
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Start Denoise",
-      "properties": {
-        "Node name for S&R": "CyclistMathFloat"
-      },
-      "widgets_values": [
-        "addition",
-        0.46,
-        0
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 105,
-      "type": "MathExpression|pysssss",
-      "pos": [
-        1180,
-        1090
-      ],
-      "size": {
-        "0": 210,
-        "1": 120
-      },
-      "flags": {},
-      "order": 45,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "a",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 298
-        },
-        {
-          "name": "b",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 300
-        },
-        {
-          "name": "c",
-          "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 162
-        }
-      ],
-      "outputs": [
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": [],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            171
-          ],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "title": "CFG Grouth (-)",
-      "properties": {
-        "Node name for S&R": "MathExpression|pysssss"
-      },
-      "widgets_values": [
-        "(a - b) / max(1, (c - 1))"
-      ]
-    },
-    {
       "id": 106,
       "type": "MathExpression|pysssss",
       "pos": [
         1180,
-        1260
+        1320
       ],
       "size": {
         "0": 210,
@@ -3207,12 +3392,12 @@
         {
           "name": "a",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 301
+          "link": 341
         },
         {
           "name": "b",
           "type": "INT,FLOAT,IMAGE,LATENT",
-          "link": 303
+          "link": 343
         },
         {
           "name": "c",
@@ -3247,60 +3432,91 @@
       ]
     },
     {
-      "id": 41,
-      "type": "LoadImage",
+      "id": 149,
+      "type": "OverrideImage",
       "pos": [
-        -100,
-        50
+        2290,
+        550
+      ],
+      "size": {
+        "0": 1680,
+        "1": 830
+      },
+      "flags": {},
+      "order": 71,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 273
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": 294,
+          "widget": {
+            "name": "filename"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OverrideImage"
+      },
+      "widgets_values": [
+        "ForLoop_1"
+      ]
+    },
+    {
+      "id": 135,
+      "type": "Reroute",
+      "pos": [
+        2170,
+        500
       ],
       "size": [
-        440,
-        310
+        82,
+        26
       ],
       "flags": {},
-      "order": 13,
+      "order": 70,
       "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 217,
+          "pos": [
+            41,
+            0
+          ]
+        }
+      ],
       "outputs": [
         {
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            253,
-            254,
-            255,
-            256,
-            257
+            273
           ],
-          "shape": 3,
           "slot_index": 0
-        },
-        {
-          "name": "MASK",
-          "type": "MASK",
-          "links": null,
-          "shape": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "LoadImage"
-      },
-      "widgets_values": [
-        "ComfyUI_00131_.png",
-        "image"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
+        "showOutputText": true,
+        "horizontal": true
+      }
     },
     {
-      "id": 155,
-      "type": "RecallString",
+      "id": 165,
+      "type": "LoopManager",
       "pos": [
-        130,
-        -80
+        20,
+        -90
       ],
       "size": [
-        210,
-        80
+        320,
+        130
       ],
       "flags": {},
       "order": 14,
@@ -3310,19 +3526,19 @@
           "name": "STRING",
           "type": "STRING",
           "links": [
-            290
+            318
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
-      "title": "Filename",
       "properties": {
-        "Node name for S&R": "RecallString"
+        "Node name for S&R": "LoopManager"
       },
       "widgets_values": [
-        "Whatever",
-        "UpscaleTo2K_12"
+        "UpscaleTo2K_1",
+        "on_any_interrupt",
+        "UpscaleTo2K_18:\n(#4)INT: 4\n(#3)IMAGE: UpscaleTo2K_18.png\n\nUpscaleTo2K_17:\n(#5)INT: 5\n(#4)IMAGE: UpscaleTo2K_17.png\n\nUpscaleTo2K_16:\n(#2)INT: 2\n(#1)IMAGE: UpscaleTo2K_16.png\n\nUpscaleTo2K_15:\n(#2)INT: 2\n(#1)IMAGE: UpscaleTo2K_15.png\n\nUpscaleTo2K_14:\n(#2)INT: 2\n(#1)IMAGE: UpscaleTo2K_14.png\n\nUpscaleTo2K_13:\n(#3)INT: 3\n(#1)IMAGE: UpscaleTo2K_13.png\n\nTimer_4:\n\nTimer_3:\n\nTimer_2:\n\nTimer_1:"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -3994,14 +4210,6 @@
       "IMAGE"
     ],
     [
-      287,
-      154,
-      0,
-      74,
-      0,
-      "*"
-    ],
-    [
       288,
       154,
       0,
@@ -4016,14 +4224,6 @@
       76,
       0,
       "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      290,
-      155,
-      0,
-      91,
-      0,
-      "*"
     ],
     [
       291,
@@ -4058,78 +4258,6 @@
       "STRING"
     ],
     [
-      295,
-      156,
-      0,
-      104,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      296,
-      156,
-      0,
-      108,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      297,
-      157,
-      0,
-      104,
-      1,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      298,
-      158,
-      0,
-      105,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      299,
-      158,
-      0,
-      109,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      300,
-      159,
-      0,
-      105,
-      1,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      301,
-      160,
-      0,
-      106,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      302,
-      160,
-      0,
-      110,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      303,
-      161,
-      0,
-      106,
-      1,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
       304,
       162,
       0,
@@ -4146,100 +4274,196 @@
       "INT,FLOAT,IMAGE,LATENT"
     ],
     [
-      306,
-      163,
+      318,
+      165,
       0,
-      45,
+      91,
+      0,
+      "*"
+    ],
+    [
+      321,
+      154,
+      0,
+      169,
+      0,
+      "IMAGE"
+    ],
+    [
+      322,
+      169,
+      0,
+      74,
+      0,
+      "*"
+    ],
+    [
+      323,
+      170,
       2,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      307,
-      163,
-      0,
-      54,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      308,
-      163,
-      0,
-      57,
-      0,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      309,
-      163,
-      0,
-      144,
-      1,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      310,
-      163,
-      0,
-      42,
-      2,
-      "INT,FLOAT,IMAGE,LATENT"
-    ],
-    [
-      311,
-      164,
-      0,
       42,
       1,
       "INT,FLOAT,IMAGE,LATENT"
     ],
     [
-      312,
-      164,
-      0,
+      324,
+      170,
+      2,
       45,
       1,
       "INT,FLOAT,IMAGE,LATENT"
     ],
     [
-      313,
-      164,
-      0,
+      325,
+      170,
+      2,
       53,
       0,
       "INT,FLOAT,IMAGE,LATENT"
     ],
     [
-      314,
-      164,
-      0,
+      326,
+      170,
+      2,
       56,
       0,
       "INT,FLOAT,IMAGE,LATENT"
     ],
     [
-      315,
-      164,
-      0,
+      327,
+      170,
+      2,
+      151,
+      1,
+      "*"
+    ],
+    [
+      328,
+      170,
+      2,
       145,
       1,
       "INT,FLOAT,IMAGE,LATENT"
     ],
     [
-      316,
-      163,
+      329,
+      171,
+      2,
+      42,
+      2,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      330,
+      171,
+      2,
+      45,
+      2,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      331,
+      171,
+      2,
+      54,
       0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      332,
+      171,
+      2,
+      57,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      333,
+      171,
+      2,
       152,
       1,
       "*"
     ],
     [
-      317,
-      164,
-      0,
-      151,
+      334,
+      171,
+      2,
+      144,
       1,
-      "*"
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      335,
+      172,
+      2,
+      108,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      336,
+      172,
+      2,
+      104,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      337,
+      173,
+      2,
+      104,
+      1,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      338,
+      174,
+      1,
+      105,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      339,
+      174,
+      1,
+      109,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      340,
+      176,
+      1,
+      105,
+      1,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      341,
+      177,
+      1,
+      106,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      342,
+      177,
+      1,
+      110,
+      0,
+      "INT,FLOAT,IMAGE,LATENT"
+    ],
+    [
+      343,
+      178,
+      1,
+      106,
+      1,
+      "INT,FLOAT,IMAGE,LATENT"
     ]
   ],
   "groups": [
@@ -4247,7 +4471,7 @@
       "title": "Crop initial image",
       "bounding": [
         410,
-        -24,
+        6,
         730,
         520
       ],
@@ -4259,9 +4483,9 @@
       "title": "Calculate grouth every iteration",
       "bounding": [
         680,
-        516,
-        719,
-        864
+        546,
+        720,
+        900
       ],
       "color": "#A88",
       "font_size": 24,
@@ -4271,9 +4495,9 @@
       "title": "Inputs",
       "bounding": [
         -110,
-        -524,
-        470,
-        1894
+        -534,
+        460,
+        1974
       ],
       "color": "#8A8",
       "font_size": 24,
@@ -4282,10 +4506,10 @@
     {
       "title": "Loop",
       "bounding": [
-        1406,
-        -21,
-        2571,
-        1399
+        1410,
+        6,
+        2572,
+        1384
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -4295,7 +4519,7 @@
       "title": "Conditioning",
       "bounding": [
         370,
-        -524,
+        -534,
         920,
         490
       ],

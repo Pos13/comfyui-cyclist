@@ -1,6 +1,6 @@
 {
-  "last_node_id": 120,
-  "last_link_id": 160,
+  "last_node_id": 123,
+  "last_link_id": 161,
   "nodes": [
     {
       "id": 2,
@@ -14,7 +14,7 @@
         "1": 66
       },
       "flags": {},
-      "order": 19,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -37,10 +37,11 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere3",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere3"
-      }
+        "color_restricted": false
+      },
+      "widgets_values": []
     },
     {
       "id": 48,
@@ -51,10 +52,10 @@
       ],
       "size": {
         "0": 210,
-        "1": 110
+        "1": 127
       },
       "flags": {},
-      "order": 29,
+      "order": 36,
       "mode": 0,
       "inputs": [
         {
@@ -65,9 +66,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere?",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere?"
+        "color_restricted": false
       },
       "widgets_values": [
         "Cat",
@@ -84,10 +85,10 @@
       ],
       "size": {
         "0": 210,
-        "1": 110
+        "1": 127
       },
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
@@ -98,9 +99,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere?",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere?"
+        "color_restricted": false
       },
       "widgets_values": [
         "Background",
@@ -157,10 +158,10 @@
       ],
       "size": {
         "0": 210,
-        "1": 110
+        "1": 127
       },
       "flags": {},
-      "order": 14,
+      "order": 15,
       "mode": 0,
       "inputs": [
         {
@@ -171,9 +172,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere?",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere?"
+        "color_restricted": false
       },
       "widgets_values": [
         ".*",
@@ -193,7 +194,7 @@
         "1": 30
       },
       "flags": {},
-      "order": 15,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -204,10 +205,11 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere"
-      }
+        "color_restricted": false
+      },
+      "widgets_values": []
     },
     {
       "id": 11,
@@ -253,10 +255,10 @@
       ],
       "size": {
         "0": 210,
-        "1": 110
+        "1": 127
       },
       "flags": {},
-      "order": 28,
+      "order": 30,
       "mode": 0,
       "inputs": [
         {
@@ -267,9 +269,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere?",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere?"
+        "color_restricted": false
       },
       "widgets_values": [
         "Final",
@@ -286,10 +288,10 @@
       ],
       "size": {
         "0": 210,
-        "1": 110
+        "1": 127
       },
       "flags": {},
-      "order": 22,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -300,9 +302,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere?",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere?"
+        "color_restricted": false
       },
       "widgets_values": [
         ".*",
@@ -364,7 +366,7 @@
         "1": 54
       },
       "flags": {},
-      "order": 18,
+      "order": 26,
       "mode": 0,
       "inputs": [
         {
@@ -409,10 +411,10 @@
       ],
       "size": {
         "0": 210,
-        "1": 110
+        "1": 127
       },
       "flags": {},
-      "order": 27,
+      "order": 29,
       "mode": 0,
       "inputs": [
         {
@@ -423,9 +425,9 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere?",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere?"
+        "color_restricted": false
       },
       "widgets_values": [
         "Noisy",
@@ -476,97 +478,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 23,
-      "type": "ImpactWildcardProcessor",
-      "pos": [
-        -200,
-        810
-      ],
-      "size": {
-        "0": 500,
-        "1": 260
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            21
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImpactWildcardProcessor"
-      },
-      "widgets_values": [
-        "a photo of {shorthaired|longhaired|curly|tuxedo|calico|smoke|tabby|buff|chinchilla|torbie|rosette|harlequin|black|white|lavender|tan|lilac|hairless} cat",
-        "a photo of lilac cat",
-        true,
-        558212799713379,
-        "randomize",
-        "Select the Wildcard to add to the text"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
-      "id": 1,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        110,
-        360
-      ],
-      "size": {
-        "0": 420,
-        "1": 100
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            1
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            2
-          ],
-          "shape": 3,
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            3
-          ],
-          "shape": 3,
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "XL\\dreamshaperXL_turbo_DpmppSDE.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 58,
       "type": "EmptyLatentImage",
       "pos": [
@@ -578,7 +489,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 32,
+      "order": 33,
       "mode": 0,
       "inputs": [
         {
@@ -622,7 +533,7 @@
         "1": 230
       },
       "flags": {},
-      "order": 36,
+      "order": 38,
       "mode": 0,
       "inputs": [
         {
@@ -704,7 +615,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 6,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -738,7 +649,7 @@
         "1": 154
       },
       "flags": {},
-      "order": 40,
+      "order": 42,
       "mode": 0,
       "inputs": [
         {
@@ -781,7 +692,7 @@
         "1": 150
       },
       "flags": {},
-      "order": 43,
+      "order": 45,
       "mode": 0,
       "inputs": [
         {
@@ -829,7 +740,7 @@
         "1": 30
       },
       "flags": {},
-      "order": 45,
+      "order": 47,
       "mode": 0,
       "inputs": [
         {
@@ -866,7 +777,7 @@
         "1": 30
       },
       "flags": {},
-      "order": 47,
+      "order": 49,
       "mode": 0,
       "inputs": [
         {
@@ -903,7 +814,7 @@
         "1": 130
       },
       "flags": {},
-      "order": 49,
+      "order": 51,
       "mode": 0,
       "inputs": [
         {
@@ -945,7 +856,7 @@
         "1": 230
       },
       "flags": {},
-      "order": 42,
+      "order": 44,
       "mode": 2,
       "inputs": [
         {
@@ -1011,7 +922,7 @@
       },
       "widgets_values": [
         false,
-        262490962779270,
+        1077892961518049,
         "randomize",
         1.1
       ]
@@ -1028,7 +939,7 @@
         "1": 82
       },
       "flags": {},
-      "order": 7,
+      "order": 5,
       "mode": 0,
       "outputs": [
         {
@@ -1061,7 +972,7 @@
         "1": 50
       },
       "flags": {},
-      "order": 35,
+      "order": 37,
       "mode": 0,
       "inputs": [
         {
@@ -1103,7 +1014,7 @@
         "1": 130
       },
       "flags": {},
-      "order": 31,
+      "order": 32,
       "mode": 0,
       "inputs": [
         {
@@ -1145,7 +1056,7 @@
         "1": 154
       },
       "flags": {},
-      "order": 20,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -1190,7 +1101,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 38,
+      "order": 40,
       "mode": 0,
       "inputs": [
         {
@@ -1244,7 +1155,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 50,
+      "order": 52,
       "mode": 0,
       "inputs": [
         {
@@ -1284,7 +1195,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 8,
+      "order": 6,
       "mode": 2,
       "inputs": [
         {
@@ -1326,7 +1237,7 @@
         "1": 80
       },
       "flags": {},
-      "order": 16,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -1376,7 +1287,7 @@
         "1": 110
       },
       "flags": {},
-      "order": 9,
+      "order": 7,
       "mode": 0,
       "outputs": [
         {
@@ -1410,7 +1321,7 @@
         "1": 230
       },
       "flags": {},
-      "order": 30,
+      "order": 31,
       "mode": 0,
       "inputs": [
         {
@@ -1476,7 +1387,7 @@
       },
       "widgets_values": [
         false,
-        333881005689252,
+        1219321467054,
         "randomize",
         1.1
       ]
@@ -1493,7 +1404,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 10,
+      "order": 8,
       "mode": 2,
       "title": "Why is group disabled?",
       "properties": {
@@ -1517,7 +1428,7 @@
         "1": 230
       },
       "flags": {},
-      "order": 21,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -1583,7 +1494,7 @@
       },
       "widgets_values": [
         true,
-        434291448938151,
+        664846851713649,
         "randomize",
         8
       ]
@@ -1600,7 +1511,7 @@
         "1": 30
       },
       "flags": {},
-      "order": 33,
+      "order": 34,
       "mode": 0,
       "inputs": [
         {
@@ -1611,10 +1522,11 @@
         }
       ],
       "properties": {
+        "Node name for S&R": "Anything Everywhere",
         "group_restricted": false,
-        "color_restricted": false,
-        "Node name for S&R": "Anything Everywhere"
-      }
+        "color_restricted": false
+      },
+      "widgets_values": []
     },
     {
       "id": 14,
@@ -1628,7 +1540,7 @@
         "1": 250
       },
       "flags": {},
-      "order": 37,
+      "order": 39,
       "mode": 0,
       "inputs": [
         {
@@ -1653,7 +1565,7 @@
         "1": 250
       },
       "flags": {},
-      "order": 48,
+      "order": 50,
       "mode": 0,
       "inputs": [
         {
@@ -1673,12 +1585,12 @@
         800,
         510
       ],
-      "size": [
-        210,
-        80
-      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
       "flags": {},
-      "order": 23,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -1717,12 +1629,12 @@
         310,
         1550
       ],
-      "size": [
-        210,
-        110
-      ],
+      "size": {
+        "0": 210,
+        "1": 110
+      },
       "flags": {},
-      "order": 11,
+      "order": 9,
       "mode": 0,
       "outputs": [
         {
@@ -1759,7 +1671,7 @@
         "1": 50
       },
       "flags": {},
-      "order": 44,
+      "order": 46,
       "mode": 2,
       "inputs": [
         {
@@ -1800,7 +1712,7 @@
         "1": 142
       },
       "flags": {},
-      "order": 51,
+      "order": 53,
       "mode": 0,
       "inputs": [
         {
@@ -1854,12 +1766,12 @@
         320,
         510
       ],
-      "size": [
-        210,
-        110
-      ],
+      "size": {
+        "0": 210,
+        "1": 110
+      },
       "flags": {},
-      "order": 12,
+      "order": 10,
       "mode": 0,
       "outputs": [
         {
@@ -1897,7 +1809,7 @@
         60
       ],
       "flags": {},
-      "order": 41,
+      "order": 43,
       "mode": 0,
       "inputs": [
         {
@@ -1941,12 +1853,12 @@
         1790,
         620
       ],
-      "size": [
-        210,
-        80
-      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
       "flags": {},
-      "order": 24,
+      "order": 23,
       "mode": 0,
       "inputs": [
         {
@@ -1987,10 +1899,10 @@
       ],
       "size": {
         "0": 210,
-        "1": 80
+        "1": 82
       },
       "flags": {},
-      "order": 26,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -2029,12 +1941,12 @@
         1790,
         750
       ],
-      "size": [
-        210,
-        80
-      ],
+      "size": {
+        "0": 210,
+        "1": 80
+      },
       "flags": {},
-      "order": 25,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -2068,43 +1980,79 @@
       ]
     },
     {
-      "id": 112,
-      "type": "ReloadLatent",
+      "id": 115,
+      "type": "OverrideImage",
       "pos": [
-        1550,
-        510
+        2270,
+        100
+      ],
+      "size": [
+        210,
+        310
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 2,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 152
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "filename"
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OverrideImage"
+      },
+      "widgets_values": [
+        "CatStack_1"
+      ]
+    },
+    {
+      "id": 120,
+      "type": "MemorizeInt",
+      "pos": [
+        2270,
+        880
       ],
       "size": [
         210,
         60
       ],
       "flags": {},
-      "order": 39,
+      "order": 35,
       "mode": 0,
       "inputs": [
         {
-          "name": "fallback",
-          "type": "LATENT",
-          "link": 148
-        }
-      ],
-      "outputs": [
+          "name": "to_memory",
+          "type": "INT",
+          "link": 160,
+          "widget": {
+            "name": "to_memory"
+          }
+        },
         {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            149,
-            150
-          ],
-          "shape": 3,
-          "slot_index": 0
+          "name": "loop_id",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "loop_id"
+          }
         }
       ],
       "properties": {
-        "Node name for S&R": "ReloadLatent"
+        "Node name for S&R": "MemorizeInt"
       },
       "widgets_values": [
-        "CatStack_1"
+        "CatStack_1",
+        0
       ]
     },
     {
@@ -2116,11 +2064,21 @@
       ],
       "size": [
         210,
-        80
+        60
       ],
       "flags": {},
-      "order": 13,
+      "order": 11,
       "mode": 0,
+      "inputs": [
+        {
+          "name": "loop_id",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "loop_id"
+          }
+        }
+      ],
       "outputs": [
         {
           "name": "INT",
@@ -2152,16 +2110,24 @@
       ],
       "size": [
         210,
-        60
+        50
       ],
       "flags": {},
-      "order": 52,
+      "order": 54,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
           "link": 153
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "filename"
+          }
         }
       ],
       "properties": {
@@ -2172,64 +2138,212 @@
       ]
     },
     {
-      "id": 120,
-      "type": "MemorizeInt",
+      "id": 112,
+      "type": "ReloadLatent",
       "pos": [
-        2270,
-        880
+        1550,
+        510
       ],
       "size": [
         210,
-        60
+        50
       ],
       "flags": {},
-      "order": 34,
+      "order": 41,
       "mode": 0,
       "inputs": [
         {
-          "name": "to_memory",
-          "type": "INT",
-          "link": 160,
+          "name": "fallback",
+          "type": "LATENT",
+          "link": 148
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": null,
           "widget": {
-            "name": "to_memory"
+            "name": "filename"
           }
         }
       ],
-      "properties": {
-        "Node name for S&R": "MemorizeInt"
-      },
-      "widgets_values": [
-        "CatStack_1",
-        0
-      ]
-    },
-    {
-      "id": 115,
-      "type": "OverrideImage",
-      "pos": [
-        2270,
-        100
-      ],
-      "size": [
-        210,
-        310
-      ],
-      "flags": {},
-      "order": 46,
-      "mode": 2,
-      "inputs": [
+      "outputs": [
         {
-          "name": "image",
-          "type": "IMAGE",
-          "link": 152
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            149,
+            150
+          ],
+          "shape": 3,
+          "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "OverrideImage"
+        "Node name for S&R": "ReloadLatent"
       },
       "widgets_values": [
         "CatStack_1"
       ]
+    },
+    {
+      "id": 23,
+      "type": "ImpactWildcardProcessor",
+      "pos": [
+        -200,
+        850
+      ],
+      "size": {
+        "0": 500,
+        "1": 260
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactWildcardProcessor"
+      },
+      "widgets_values": [
+        "a photo of {shorthaired|longhaired|curly|tuxedo|calico|smoke|tabby|buff|chinchilla|torbie|rosette|harlequin|black|white|lavender|tan|lilac|hairless} cat",
+        "a photo of calico cat",
+        true,
+        212473174743781,
+        "randomize",
+        "Select the Wildcard to add to the text"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 123,
+      "type": "Anything Everywhere?",
+      "pos": [
+        80,
+        510
+      ],
+      "size": [
+        210,
+        130
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "*",
+          "link": 161,
+          "color_on": ""
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "loop_id|filename",
+        ""
+      ]
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        70,
+        360
+      ],
+      "size": [
+        460,
+        100
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            2
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            3
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "XL\\dreamshaperXL_turbo_DpmppSDE.safetensors"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 121,
+      "type": "LoopManager",
+      "pos": [
+        -200,
+        510
+      ],
+      "size": [
+        250,
+        290
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            161
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoopManager"
+      },
+      "widgets_values": [
+        "CatStack_1",
+        "never",
+        "CatStack_2:\n(#1)INT: 1\n(#1)LATENT: CatStack_2.latent\n(#1)IMAGE: CatStack_2.png\n\nCatStack_1:\n(#6)INT: 6\n(#4)LATENT: CatStack_1.latent\n(#2)IMAGE: CatStack_1.png"
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
     }
   ],
   "links": [
@@ -2239,7 +2353,7 @@
       0,
       2,
       0,
-      "*"
+      "MODEL"
     ],
     [
       2,
@@ -2247,7 +2361,7 @@
       1,
       2,
       1,
-      "*"
+      "CLIP"
     ],
     [
       3,
@@ -2255,7 +2369,7 @@
       2,
       2,
       2,
-      "*"
+      "VAE"
     ],
     [
       6,
@@ -2263,7 +2377,7 @@
       0,
       8,
       0,
-      "*"
+      "CONDITIONING"
     ],
     [
       8,
@@ -2271,7 +2385,7 @@
       0,
       12,
       0,
-      "*"
+      "SAMPLER"
     ],
     [
       11,
@@ -2319,7 +2433,7 @@
       0,
       48,
       0,
-      "*"
+      "CONDITIONING"
     ],
     [
       48,
@@ -2327,7 +2441,7 @@
       0,
       51,
       0,
-      "*"
+      "CONDITIONING"
     ],
     [
       49,
@@ -2343,7 +2457,7 @@
       0,
       53,
       0,
-      "*"
+      "SIGMAS"
     ],
     [
       51,
@@ -2351,7 +2465,7 @@
       1,
       54,
       0,
-      "*"
+      "SIGMAS"
     ],
     [
       64,
@@ -2543,7 +2657,7 @@
       0,
       88,
       0,
-      "*"
+      "FLOAT"
     ],
     [
       152,
@@ -2599,7 +2713,7 @@
       0,
       106,
       0,
-      "*"
+      "BOOLEAN"
     ],
     [
       159,
@@ -2616,6 +2730,14 @@
       120,
       0,
       "INT"
+    ],
+    [
+      161,
+      121,
+      0,
+      123,
+      0,
+      "STRING"
     ]
   ],
   "groups": [

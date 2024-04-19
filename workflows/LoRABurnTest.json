@@ -1,6 +1,6 @@
 {
-  "last_node_id": 106,
-  "last_link_id": 209,
+  "last_node_id": 107,
+  "last_link_id": 212,
   "nodes": [
     {
       "id": 94,
@@ -179,7 +179,7 @@
         "Run widget replace on values": false
       },
       "widgets_values": [
-        "Style\\add_detail.safetensors",
+        "Style\\wowifierV2.safetensors",
         "randomize",
         "style"
       ],
@@ -411,38 +411,6 @@
       "bgcolor": "#353"
     },
     {
-      "id": 90,
-      "type": "VAELoader",
-      "pos": [
-        40,
-        250
-      ],
-      "size": {
-        "0": 315,
-        "1": 58
-      },
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            190
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "VAELoader"
-      },
-      "widgets_values": [
-        "vae-ft-mse-840000-ema-pruned.vae.pt"
-      ]
-    },
-    {
       "id": 86,
       "type": "Lora Loader",
       "pos": [
@@ -512,7 +480,7 @@
         "Node name for S&R": "Lora Loader"
       },
       "widgets_values": [
-        "Style\\add_detail.safetensors",
+        "Style\\wowifierV2.safetensors",
         0.9,
         0.9
       ]
@@ -550,7 +518,7 @@
         {
           "name": "filename",
           "type": "STRING",
-          "link": 192,
+          "link": 210,
           "widget": {
             "name": "filename"
           }
@@ -626,7 +594,7 @@
         {
           "name": "filename",
           "type": "STRING",
-          "link": 196,
+          "link": 211,
           "widget": {
             "name": "filename"
           }
@@ -640,74 +608,16 @@
       ]
     },
     {
-      "id": 92,
-      "type": "Text String",
-      "pos": [
-        140,
-        360
-      ],
-      "size": {
-        "0": 210,
-        "1": 190
-      },
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": [
-            192,
-            196,
-            205
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "title": "Filename",
-      "properties": {
-        "Node name for S&R": "Text String"
-      },
-      "widgets_values": [
-        "BurnTest_1",
-        "",
-        "",
-        ""
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
       "id": 106,
       "type": "MemorizeString",
       "pos": [
         1150,
         800
       ],
-      "size": [
-        210,
-        50
-      ],
+      "size": {
+        "0": 210,
+        "1": 54
+      },
       "flags": {},
       "order": 16,
       "mode": 0,
@@ -879,7 +789,7 @@
         {
           "name": "",
           "type": "*",
-          "link": 205,
+          "link": 212,
           "widget": {
             "name": "value"
           }
@@ -901,6 +811,74 @@
         "showOutputText": true,
         "horizontal": false
       }
+    },
+    {
+      "id": 90,
+      "type": "VAELoader",
+      "pos": [
+        40,
+        250
+      ],
+      "size": [
+        320,
+        60
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            190
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "vae-ft-mse-840000-ema-pruned.vae.pt"
+      ]
+    },
+    {
+      "id": 107,
+      "type": "LoopManager",
+      "pos": [
+        40,
+        360
+      ],
+      "size": [
+        320,
+        240
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            210,
+            211,
+            212
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoopManager"
+      },
+      "widgets_values": [
+        "BurnTest_1",
+        "never",
+        "BurnTest_2:\n(#3)STRING: BurnTest_2-UV_fluorescence-LyCORIS-FiveDecorsAIx3-FiveDecorsAIx3\n(#3)MODEL: BurnTest_2.safetensors\n\nBurnTest_1:\n(#5)STRING: BurnTest_1-add_detail-FiveDecorsAIx3-wowifierV2-LASER-V1-LASER-V1\n(#5)MODEL: BurnTest_1.safetensors\n\nBLIPTested_15:\n(#1)IMAGE: BLIPTested_15.png\n\nBLIPTested_14:\n(#1)IMAGE: BLIPTested_14.png\n\nScore_1:\n(#4)FLOAT: 0.9399489164352417\n\nAestheticArt_1:\n(#11)IMAGE: AestheticArt_1.png"
+      ]
     }
   ],
   "links": [
@@ -1057,14 +1035,6 @@
       "*"
     ],
     [
-      192,
-      92,
-      0,
-      102,
-      3,
-      "STRING"
-    ],
-    [
       193,
       86,
       0,
@@ -1089,28 +1059,12 @@
       "VAE"
     ],
     [
-      196,
-      92,
-      0,
-      103,
-      3,
-      "STRING"
-    ],
-    [
       198,
       104,
       0,
       91,
       0,
       "STRING"
-    ],
-    [
-      205,
-      92,
-      0,
-      105,
-      0,
-      "*"
     ],
     [
       206,
@@ -1143,6 +1097,30 @@
       106,
       1,
       "STRING"
+    ],
+    [
+      210,
+      107,
+      0,
+      102,
+      3,
+      "STRING"
+    ],
+    [
+      211,
+      107,
+      0,
+      103,
+      3,
+      "STRING"
+    ],
+    [
+      212,
+      107,
+      0,
+      105,
+      0,
+      "*"
     ]
   ],
   "groups": [

@@ -1,6 +1,6 @@
 {
-  "last_node_id": 67,
-  "last_link_id": 111,
+  "last_node_id": 71,
+  "last_link_id": 121,
   "nodes": [
     {
       "id": 3,
@@ -14,7 +14,7 @@
         "1": 262
       },
       "flags": {},
-      "order": 18,
+      "order": 21,
       "mode": 0,
       "inputs": [
         {
@@ -52,7 +52,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        284180054373447,
+        360572502491967,
         "randomize",
         26,
         7,
@@ -73,7 +73,7 @@
         "1": 54
       },
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -120,7 +120,7 @@
         "1": 76
       },
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 0,
       "inputs": [
         {
@@ -161,7 +161,7 @@
         60
       ],
       "flags": {},
-      "order": 17,
+      "order": 20,
       "mode": 0,
       "inputs": [
         {
@@ -210,7 +210,7 @@
         26
       ],
       "flags": {},
-      "order": 10,
+      "order": 11,
       "mode": 0,
       "inputs": [
         {
@@ -246,7 +246,7 @@
         "1": 50
       },
       "flags": {},
-      "order": 19,
+      "order": 22,
       "mode": 0,
       "inputs": [
         {
@@ -273,70 +273,6 @@
       "properties": {
         "Node name for S&R": "VAEDecode"
       }
-    },
-    {
-      "id": 43,
-      "type": "Constant Number",
-      "pos": [
-        1550,
-        810
-      ],
-      "size": {
-        "0": 210,
-        "1": 100
-      },
-      "flags": {},
-      "order": 27,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "number_as_text",
-          "type": "STRING",
-          "link": null,
-          "widget": {
-            "name": "number_as_text"
-          }
-        },
-        {
-          "name": "number",
-          "type": "FLOAT",
-          "link": 110,
-          "widget": {
-            "name": "number"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "NUMBER",
-          "type": "NUMBER",
-          "links": [
-            61
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "Constant Number"
-      },
-      "widgets_values": [
-        "integer",
-        0,
-        ""
-      ]
     },
     {
       "id": 50,
@@ -386,7 +322,7 @@
         26
       ],
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
@@ -454,7 +390,7 @@
       "id": 46,
       "type": "Text to Console",
       "pos": [
-        1160,
+        1150,
         710
       ],
       "size": {
@@ -462,7 +398,7 @@
         "1": 60
       },
       "flags": {},
-      "order": 25,
+      "order": 27,
       "mode": 0,
       "inputs": [
         {
@@ -491,51 +427,10 @@
       ]
     },
     {
-      "id": 59,
-      "type": "Reroute",
-      "pos": [
-        1470,
-        340
-      ],
-      "size": [
-        82,
-        26
-      ],
-      "flags": {},
-      "order": 20,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 86,
-          "pos": [
-            41,
-            0
-          ]
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            95,
-            97
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": true
-      }
-    },
-    {
       "id": 60,
       "type": "Reroute",
       "pos": [
-        860,
+        850,
         690
       ],
       "size": [
@@ -543,7 +438,7 @@
         26
       ],
       "flags": {},
-      "order": 21,
+      "order": 24,
       "mode": 0,
       "inputs": [
         {
@@ -572,42 +467,6 @@
       }
     },
     {
-      "id": 61,
-      "type": "Reroute",
-      "pos": [
-        1670,
-        730
-      ],
-      "size": [
-        82,
-        26
-      ],
-      "flags": {},
-      "order": 22,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "",
-          "type": "*",
-          "link": 97
-        }
-      ],
-      "outputs": [
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            98
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "showOutputText": true,
-        "horizontal": false
-      }
-    },
-    {
       "id": 51,
       "type": "Reroute",
       "pos": [
@@ -619,7 +478,7 @@
         26
       ],
       "flags": {},
-      "order": 12,
+      "order": 14,
       "mode": 0,
       "inputs": [
         {
@@ -712,7 +571,7 @@
         26
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -776,7 +635,7 @@
       "id": 45,
       "type": "EmptyImage",
       "pos": [
-        -100,
+        -120,
         900
       ],
       "size": {
@@ -811,7 +670,7 @@
       "id": 55,
       "type": "Reroute",
       "pos": [
-        -100,
+        -120,
         1040
       ],
       "size": [
@@ -819,7 +678,7 @@
         26
       ],
       "flags": {},
-      "order": 13,
+      "order": 16,
       "mode": 0,
       "inputs": [
         {
@@ -858,7 +717,7 @@
         26
       ],
       "flags": {},
-      "order": 14,
+      "order": 17,
       "mode": 0,
       "inputs": [
         {
@@ -898,7 +757,7 @@
         "1": 80
       },
       "flags": {},
-      "order": 16,
+      "order": 19,
       "mode": 0,
       "inputs": [
         {
@@ -931,10 +790,240 @@
       ]
     },
     {
+      "id": 34,
+      "type": "ImageRewardScore",
+      "pos": [
+        370,
+        830
+      ],
+      "size": {
+        "0": 210,
+        "1": 74
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "IMAGEREWARD_MODEL",
+          "link": 47
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 101
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 81,
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SCORE_FLOAT",
+          "type": "FLOAT",
+          "links": [
+            104,
+            108
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "SCORE_STRING",
+          "type": "STRING",
+          "links": [],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageRewardScore"
+      },
+      "widgets_values": [
+        "abstract concept art of a woman vaulting over a block wearing helmet, dynamic pose ,TRON aesthetic, canvas, exotic design, polygons, electric sparks, illustration masterpiece, 8K wallpaper, art by Benedick Bana, Jarek Kubicki, Paul Catherall"
+      ]
+    },
+    {
+      "id": 63,
+      "type": "CyclistMathFloat",
+      "pos": [
+        370,
+        660
+      ],
+      "size": {
+        "0": 210,
+        "1": 110
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Target Score",
+      "properties": {
+        "Node name for S&R": "CyclistMathFloat"
+      },
+      "widgets_values": [
+        "addition",
+        0.7,
+        0
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 65,
+      "type": "CyclistCompare",
+      "pos": [
+        1150,
+        810
+      ],
+      "size": {
+        "0": 210,
+        "1": 80
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "thing1",
+          "type": "*",
+          "link": 107
+        },
+        {
+          "name": "thing2",
+          "type": "*",
+          "link": 108
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            114
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CyclistCompare"
+      },
+      "widgets_values": [
+        "greater than"
+      ]
+    },
+    {
+      "id": 59,
+      "type": "Reroute",
+      "pos": [
+        1460,
+        520
+      ],
+      "size": [
+        82,
+        26
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 86,
+          "pos": [
+            41,
+            0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            95,
+            115
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": true
+      }
+    },
+    {
+      "id": 62,
+      "type": "ReloadImage",
+      "pos": [
+        130,
+        900
+      ],
+      "size": [
+        210,
+        50
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "fallback",
+          "type": "IMAGE",
+          "link": 100
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": 117,
+          "widget": {
+            "name": "filename"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            101,
+            113
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ReloadImage"
+      },
+      "widgets_values": [
+        "AestheticArt_1"
+      ]
+    },
+    {
       "id": 15,
       "type": "ImageRewardScore",
       "pos": [
-        920,
+        910,
         760
       ],
       "size": {
@@ -942,7 +1031,7 @@
         "1": 74
       },
       "flags": {},
-      "order": 23,
+      "order": 25,
       "mode": 0,
       "inputs": [
         {
@@ -992,174 +1081,16 @@
       ]
     },
     {
-      "id": 34,
-      "type": "ImageRewardScore",
-      "pos": [
-        370,
-        830
-      ],
-      "size": {
-        "0": 210,
-        "1": 74
-      },
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "IMAGEREWARD_MODEL",
-          "link": 47
-        },
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 101
-        },
-        {
-          "name": "prompt",
-          "type": "STRING",
-          "link": 81,
-          "widget": {
-            "name": "prompt"
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "SCORE_FLOAT",
-          "type": "FLOAT",
-          "links": [
-            104,
-            108
-          ],
-          "shape": 3,
-          "slot_index": 0
-        },
-        {
-          "name": "SCORE_STRING",
-          "type": "STRING",
-          "links": [],
-          "shape": 3,
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ImageRewardScore"
-      },
-      "widgets_values": [
-        "abstract concept art of a woman vaulting over a block wearing helmet, dynamic pose ,TRON aesthetic, canvas, exotic design, polygons, electric sparks, illustration masterpiece, 8K wallpaper, art by Benedick Bana, Jarek Kubicki, Paul Catherall"
-      ]
-    },
-    {
-      "id": 65,
-      "type": "CyclistCompare",
-      "pos": [
-        1160,
-        810
-      ],
-      "size": {
-        "0": 210,
-        "1": 80
-      },
-      "flags": {},
-      "order": 24,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "thing1",
-          "type": "*",
-          "link": 107
-        },
-        {
-          "name": "thing2",
-          "type": "*",
-          "link": 108
-        }
-      ],
-      "outputs": [
-        {
-          "name": "BOOLEAN",
-          "type": "BOOLEAN",
-          "links": [
-            109
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CyclistCompare"
-      },
-      "widgets_values": [
-        "greater than"
-      ]
-    },
-    {
-      "id": 66,
-      "type": "CyclistTypeCast",
-      "pos": [
-        1390,
-        810
-      ],
-      "size": {
-        "0": 140,
-        "1": 90
-      },
-      "flags": {},
-      "order": 26,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "anything",
-          "type": "*",
-          "link": 109
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "type": "STRING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "INT",
-          "type": "INT",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            110
-          ],
-          "shape": 3,
-          "slot_index": 2
-        },
-        {
-          "name": "BOOLEAN",
-          "type": "BOOLEAN",
-          "links": null,
-          "shape": 3
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CyclistTypeCast"
-      }
-    },
-    {
-      "id": 36,
+      "id": 68,
       "type": "Image Input Switch",
       "pos": [
-        1790,
+        1390,
         880
       ],
-      "size": {
-        "0": 170,
-        "1": 70
-      },
+      "size": [
+        210,
+        70
+      ],
       "flags": {},
       "order": 28,
       "mode": 0,
@@ -1167,17 +1098,20 @@
         {
           "name": "image_a",
           "type": "IMAGE",
-          "link": 98
+          "link": 115
         },
         {
           "name": "image_b",
           "type": "IMAGE",
-          "link": 102
+          "link": 113
         },
         {
-          "name": "boolean_number",
-          "type": "NUMBER",
-          "link": 61
+          "name": "boolean",
+          "type": "BOOLEAN",
+          "link": 114,
+          "widget": {
+            "name": "boolean"
+          }
         }
       ],
       "outputs": [
@@ -1185,7 +1119,7 @@
           "name": "IMAGE",
           "type": "IMAGE",
           "links": [
-            111
+            116
           ],
           "shape": 3,
           "slot_index": 0
@@ -1193,59 +1127,137 @@
       ],
       "properties": {
         "Node name for S&R": "Image Input Switch"
-      }
+      },
+      "widgets_values": [
+        false
+      ]
     },
     {
-      "id": 62,
-      "type": "ReloadImage",
+      "id": 70,
+      "type": "Reroute",
       "pos": [
         130,
-        900
+        960
       ],
-      "size": {
-        "0": 210,
-        "1": 60
-      },
+      "size": [
+        90.4,
+        26
+      ],
       "flags": {},
-      "order": 11,
+      "order": 13,
       "mode": 0,
       "inputs": [
         {
-          "name": "fallback",
-          "type": "IMAGE",
-          "link": 100
+          "name": "",
+          "type": "*",
+          "link": 118,
+          "widget": {
+            "name": "value"
+          }
         }
       ],
       "outputs": [
         {
-          "name": "IMAGE",
-          "type": "IMAGE",
+          "name": "STRING",
+          "type": "STRING",
           "links": [
-            101,
-            102
+            120
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 69,
+      "type": "LoopManager",
+      "pos": [
+        -120,
+        660
+      ],
+      "size": [
+        220,
+        200
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            117,
+            118
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "ReloadImage"
+        "Node name for S&R": "LoopManager"
       },
       "widgets_values": [
-        "AestheticArt_1"
-      ]
+        "AestheticArt_2",
+        "by_interrupt_node",
+        "AestheticArt_1:\n(#7)IMAGE: AestheticArt_1.png"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 71,
+      "type": "Reroute",
+      "pos": [
+        1500,
+        960
+      ],
+      "size": [
+        90.4,
+        26
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 120,
+          "widget": {
+            "name": "value"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            121
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "showOutputText": true,
+        "horizontal": false
+      }
     },
     {
       "id": 67,
       "type": "OverrideImage",
       "pos": [
-        1590,
-        40
+        1640,
+        670
       ],
-      "size": {
-        "0": 770,
-        "1": 540
-      },
+      "size": [
+        630,
+        400
+      ],
       "flags": {},
       "order": 29,
       "mode": 0,
@@ -1253,7 +1265,15 @@
         {
           "name": "image",
           "type": "IMAGE",
-          "link": 111
+          "link": 116
+        },
+        {
+          "name": "filename",
+          "type": "STRING",
+          "link": 121,
+          "widget": {
+            "name": "filename"
+          }
         }
       ],
       "properties": {
@@ -1262,43 +1282,6 @@
       "widgets_values": [
         "AestheticArt_1"
       ]
-    },
-    {
-      "id": 63,
-      "type": "CyclistMathFloat",
-      "pos": [
-        370,
-        660
-      ],
-      "size": {
-        "0": 210,
-        "1": 110
-      },
-      "flags": {},
-      "order": 5,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "FLOAT",
-          "type": "FLOAT",
-          "links": [
-            103
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "title": "Target Score",
-      "properties": {
-        "Node name for S&R": "CyclistMathFloat"
-      },
-      "widgets_values": [
-        "addition",
-        0.7,
-        0
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -1399,14 +1382,6 @@
       "IMAGEREWARD_MODEL"
     ],
     [
-      61,
-      43,
-      0,
-      36,
-      2,
-      "NUMBER"
-    ],
-    [
       66,
       15,
       1,
@@ -1503,22 +1478,6 @@
       "IMAGE"
     ],
     [
-      97,
-      59,
-      0,
-      61,
-      0,
-      "*"
-    ],
-    [
-      98,
-      61,
-      0,
-      36,
-      0,
-      "IMAGE"
-    ],
-    [
       100,
       45,
       0,
@@ -1531,14 +1490,6 @@
       62,
       0,
       34,
-      1,
-      "IMAGE"
-    ],
-    [
-      102,
-      62,
-      0,
-      36,
       1,
       "IMAGE"
     ],
@@ -1583,38 +1534,78 @@
       "*"
     ],
     [
-      109,
+      113,
+      62,
+      0,
+      68,
+      1,
+      "IMAGE"
+    ],
+    [
+      114,
       65,
       0,
-      66,
-      0,
-      "*"
-    ],
-    [
-      110,
-      66,
+      68,
       2,
-      43,
-      1,
-      "FLOAT"
+      "BOOLEAN"
     ],
     [
-      111,
-      36,
+      115,
+      59,
+      0,
+      68,
+      0,
+      "IMAGE"
+    ],
+    [
+      116,
+      68,
       0,
       67,
       0,
       "IMAGE"
+    ],
+    [
+      117,
+      69,
+      0,
+      62,
+      1,
+      "STRING"
+    ],
+    [
+      118,
+      69,
+      0,
+      70,
+      0,
+      "*"
+    ],
+    [
+      120,
+      70,
+      0,
+      71,
+      0,
+      "*"
+    ],
+    [
+      121,
+      71,
+      0,
+      67,
+      1,
+      "STRING"
     ]
   ],
   "groups": [
     {
       "title": "Is result already good enough to stop?",
       "bounding": [
-        -110,
+        -130,
         586,
-        940,
-        500
+        960,
+        490
       ],
       "color": "#3f789e",
       "font_size": 24,
@@ -1635,10 +1626,10 @@
     {
       "title": "Is the new picture better than old?",
       "bounding": [
-        850,
+        840,
         636,
-        1120,
-        324
+        770,
+        360
       ],
       "color": "#3f789e",
       "font_size": 24,

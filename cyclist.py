@@ -862,7 +862,8 @@ class CyclistTimer:
 
     @classmethod
     def IS_CHANGED(self, loop_id, mode):
-        LoopTimer.getLoopTimer(loop_id).reset()
+        if (loop_id):
+            LoopTimer.getLoopTimer(loop_id).reset()
         return float("NaN")
 
 class CyclistTimerStop:

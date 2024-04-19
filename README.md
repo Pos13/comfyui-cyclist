@@ -93,6 +93,8 @@ Triggered **Interrupt** will show this message:
 
 <ins>**Save Image (Override)**</ins>: This node works similarly to default Save Image node, but filename remains the same, without counter. It saves image to your output folder![^5]
 
+<ins>**Reload Image**</ins>: Loads image by filename, from "_\ComfyUI\output_" folder. If file does not exists, fallback input is used instead. Fallback is optional. Image is loaded in RGBA, with transparency channel.[^6]
+
 <details>
   <summary>${\color{blue}Workflow\ to\ generate\ an\ image\ until\ right\ things\ are\ recognised}$</summary>
 
@@ -134,7 +136,7 @@ Notice disabled nodes! Enable them only after the whole cycle is done to save ti
 - Timer starts right before every generation, when workflow is checked.
 - Timer stops when the last "Save/Memorize" node in the workflow procs.
 
-Mutiple **Generation Timers** can be used, but you better assign them to different loops.[^6][^7]
+Mutiple **Generation Timers** can be used, but you better assign them to different loops.[^7][^8]
 
 <ins>**Force Timer Stop**</ins>: This node tells the timer to stop whenever any input is provided, no matter what. You can use it to measure time spent by certain blocks, not the whole workflow. But the start is always at generation start.
 
@@ -185,5 +187,6 @@ SDXL Turbo is used to make the amount of very noisy cats _fast_. They pile on no
 [^3]: Reroutes and Primitives don't work well with unspecified inputs. It is possible to juggle them to set different input and output types on **Interrupt** node. It's on you to not to.
 [^4]: Bypassing **Interrupt** node does not work. Just disconnect "_stop_" input instead.
 [^5]: Image batches are not supported yet. It's planned.
-[^6]: **Generation Timer** does not output the same time intervals as ComfyUI does. It doesn't account for anything happening before **Generation Timer** node is checked and after the last "Save/Memorize" (or assigned **Force Timer Stop** node) is executed.
-[^7]: **Generation Timer** only works if "_loop_id_" is in widget form, not input. I can't get around this limitition.
+[^6]: Some nodes don't support RGBA (**Upscale Image (Using Model)**, for example). You can use **Images to RGB** node from [WAS Node Suite](https://github.com/WASasquatch/was-node-suite-comfyui) to fix that.
+[^7]: **Generation Timer** does not output the same time intervals as ComfyUI does. It doesn't account for anything happening before **Generation Timer** node is checked and after the last "Save/Memorize" (or assigned **Force Timer Stop** node) is executed.
+[^8]: **Generation Timer** only works if "_loop_id_" is in widget form, not input. I can't get around this limitition.

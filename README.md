@@ -134,7 +134,7 @@ Notice disabled nodes! Enable them only after the whole cycle is done to save ti
 - Timer starts right before every generation, when workflow is checked.
 - Timer stops when the last "Save/Memorize" node in the workflow procs.
 
-Mutiple **Generation Timers** can be used, but you better assign them to different loops.[^6]
+Mutiple **Generation Timers** can be used, but you better assign them to different loops.[^6][^7]
 
 <ins>**Force Timer Stop**</ins>: This node tells the timer to stop whenever any input is provided, no matter what. You can use it to measure time spent by certain blocks, not the whole workflow. But the start is always at generation start.
 
@@ -186,3 +186,4 @@ SDXL Turbo is used to make the amount of very noisy cats _fast_. They pile on no
 [^4]: Bypassing **Interrupt** node does not work. Just disconnect "_stop_" input instead.
 [^5]: Image batches are not supported yet. It's planned.
 [^6]: **Generation Timer** does not output the same time intervals as ComfyUI does. It doesn't account for anything happening before **Generation Timer** node is checked and after the last "Save/Memorize" (or assigned **Force Timer Stop** node) is executed.
+[^7]: **Generation Timer** only works if "_loop_id_" is in widget form, not input. I can't get around this limitition.

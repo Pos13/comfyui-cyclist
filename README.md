@@ -10,9 +10,9 @@
 3. Put an **Interrupt** node if you want to stop generation when certain conditions are met.
 4. Done! Press "_Queue Prompt_". And again. And again, maybe.
     - Optionally, check "_Extra options_" and "_Auto Queue_" checkboxes to let ComfyUI infinitely repeat a workflow by itself.[^1]
-    - If you want to start a loop from scratch, press the "_New Cycle_" button introduced in this workflow. It will increment all filenames and loop IDs, if it can.[^2]
+    - If you want to start a loop from scratch, press the "_New Cycle_" button introduced in this workflow. It will increment all filenames and loop IDs, if it can.[^2]. Alternatively, use **Loop Manager** to do this automatically.
 
-![Screenshot of ComfyUI options with "New Cycle" button.](screenshots/New_Cycle_button.png)
+![Screenshot of ComfyUI options with "New Cycle" button.](https://github.com/Pos13/comfyui-cyclist/blob/main/screenshots/New_Cycle_button.png)
 
 > [!WARNING]
 > Check [Known Issues](#known-issues) at the bottom of this page to learn about non-obvious behaviour.
@@ -27,6 +27,10 @@ __Option 2__:
 - Run `git clone https://github.com/Pos13/comfyui-cyclist/` console command in it
 
 ## Nodes and example workflows
+
+<ins>**Loop Manager**</ins>: Simply provides a string. This string — loop_id — can be used as a name of a variable to put into memory, or as a filename. If the "_increment_" value is set on "_by_interrupt_node_", loop_id will automatically change when **Interrupt** node procs, to prevent overriding end result. If the "_increment_" value is set on "_on_any_interrupt_", loop_id will change in the same situation, plus when you manually cancel queue. Useful to skip failures.
+
+![Loop Manager](https://github.com/Pos13/comfyui-cyclist/blob/main/screenshots/LoopManager.png)
 
 <ins>**Memorize Int/Float/String**</ins>: These simple nodes save something in memory. Information is lost if you restart ComfyUI. Variables are exclusive to provided loop ID. You can store exactly one Int, one Float, one String and one Conditioning for every loop ID. Change ID to save a new variable of this type.
 

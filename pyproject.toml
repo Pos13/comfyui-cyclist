@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-cyclist"
+description = "This extension provides tools to iterate generation results between runs. In general, it's for cycles."
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/Pos13/comfyui-cyclist"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "comfyui-cyclist"
+Icon = ""

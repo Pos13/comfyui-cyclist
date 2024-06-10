@@ -9,6 +9,6 @@ Repository = "https://github.com/Pos13/comfyui-cyclist"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "@pos13"
 DisplayName = "comfyui-cyclist"
 Icon = ""

@@ -1,6 +1,7 @@
 import { app } from "../../../scripts/app.js";
 import { api } from "../../../scripts/api.js";
 import { $el } from "../../../scripts/ui.js";
+import { ComfyButton } from "../../../scripts/ui/components/button.js";
 import { ComfyWidgets } from "../../../scripts/widgets.js";
 
 var cyclist_states = {}
@@ -104,14 +105,14 @@ app.registerExtension({
             parent: btns,
             onclick: newCycle
         });
+        const newCycleButton = new ComfyButton({
+            content: "New Cycle (cyclist)",
+            icon: "recycle",
+            tooltip: "New Cycle (cyclist)",
+            classList: "comfyui-button comfyui-cyclist-new-cycle-button",
+        });
         const newMenuBtns = document.querySelector('.comfyui-button-group:has(.comfyui-interrupt-button)');
-        $el("button.comfyui-button", {
-            id: "cyclist-new-cycle-button",
-            textContent: "",
-            title: 'New Cycle (cyclist)',
-            parent: newMenuBtns,
-            onclick: newCycle
-        }, $el('i.mdi.mdi-recycle'));
+        newMenuBtns?.appendChild(newCycleButton.element);
         async function newCycle() {
             let already_incremented = []
             for (var node_index in app.graph._nodes) {

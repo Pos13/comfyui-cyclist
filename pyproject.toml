@@ -2,7 +2,7 @@
 name = "comfyui-cyclist"
 description = "This extension provides tools to iterate generation results between runs. In general, it's for cycles."
 version = "1.0.0"
-license = "LICENSE"
+license = { file = "LICENSE" }
 
 [project.urls]
 Repository = "https://github.com/Pos13/comfyui-cyclist"

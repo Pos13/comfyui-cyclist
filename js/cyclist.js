@@ -73,11 +73,12 @@ app.registerExtension({
                 cyclist_states["InterruptNode"+app.runningNodeId] = "Interrupt was here!"
                 if (app.ui.autoQueueMode === "instant") {
                     // Prevent short circuit in "insant" mode: queue, interrupt, queue, interrupt...
-                    app.ui.autoQueueEnabled = false;
-                    let auto_queue_checkbox = document.getElementById("autoQueueCheckbox");
-                    if(auto_queue_checkbox) auto_queue_checkbox.checked = false;
+                    app.ui.autoQueueEnabled = false
+                    let auto_queue_checkbox = document.getElementById("autoQueueCheckbox")
+                    if(auto_queue_checkbox) auto_queue_checkbox.checked = false
                 }
-                if (app.menu?.queueMenuButton?.queueOptions?.autoQueueMode === "instant") {
+                let auto_queue_new_radio = document.getElementsByClassName("comfyui-queue-mode")
+                if (auto_queue_new_radio) {
                     document.querySelector('div.comfyui-queue-mode input[value=""]').click();
                 }
             }
@@ -110,9 +111,11 @@ app.registerExtension({
             icon: "recycle",
             tooltip: "New Cycle (cyclist)",
             classList: "comfyui-button comfyui-cyclist-new-cycle-button",
+            action: () => newCycle(),
         });
-        const newMenuBtns = document.querySelector('.comfyui-button-group:has(.comfyui-interrupt-button)');
-        newMenuBtns?.appendChild(newCycleButton.element);
+        if (typeof app.menu?.viewGroup !== 'undefined' && app.menu?.viewGroup !== null) {
+            app.menu.viewGroup.append(newCycleButton)
+        }
         async function newCycle() {
             let already_incremented = []
             for (var node_index in app.graph._nodes) {

@@ -2,6 +2,9 @@
 
 [ComfyUI](https://github.com/comfyanonymous/ComfyUI) already has an option to infinitely repeat a workflow. This extension adds an ability to reuse generated results to cycle over them again and again. With this tool, you can automate whatever iterative loop action you have in mind: building grids, animating frame-by-frame, changing conditions every step, etc. 
 
+> [!WARNING]
+> This repository is archived, because I am not going to support it. The extension probably still works on your version of ComfyUI, at least partially.
+
 ## General Usage
 
 1. Put a loading node where you want to provide a result from previous run.
